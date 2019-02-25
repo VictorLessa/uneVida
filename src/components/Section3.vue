@@ -15,7 +15,7 @@
           <v-layout fill-height>
             <v-flex xs12 align-end flexbox>
               <v-radio-group v-model="result[0]">
-                <v-radio v-for="n in response" :key="n" :label="`${n.text}`" :value="n.value"></v-radio>
+                <v-radio v-for="n in response" :key="n.value" :label="`${n.text}`" :value="n.value"></v-radio>
               </v-radio-group>
             </v-flex>
           </v-layout>
@@ -39,7 +39,7 @@
           <v-layout fill-height>
             <v-flex xs12 align-end flexbox>
               <v-radio-group v-model="result[1]">
-                <v-radio v-for="n in response" :key="n" :label="`${n.text}`" :value="n.value"></v-radio>
+                <v-radio v-for="n in response" :key="n.value" :label="`${n.text}`" :value="n.value"></v-radio>
               </v-radio-group>
             </v-flex>
           </v-layout>
@@ -63,7 +63,7 @@
           <v-layout fill-height>
             <v-flex xs12 align-end flexbox>
               <v-radio-group v-model="result[2]">
-                <v-radio v-for="n in response" :key="n" :label="`${n.text}`" :value="n.value"></v-radio>
+                <v-radio v-for="n in response" :key="n.value" :label="`${n.text}`" :value="n.value"></v-radio>
               </v-radio-group>
             </v-flex>
           </v-layout>

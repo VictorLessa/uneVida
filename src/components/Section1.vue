@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "Section 1",
+  name: "Section1",
   data() {
     return {};
   }
