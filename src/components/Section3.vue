@@ -2,7 +2,7 @@
   <div>
     <v-container v-if="quiz === 0" class="section_quiz">
       <!-- <input type="image" src="/static/consciencia.png" name="Iniciar" value="Inicia quiz"/> -->
-      <input class="botton" type="button" value="Iniciar Quiz"/>
+      <input class="botton" @click="startQuiz" type="button" value="Iniciar Quiz">
       <!-- <v-btn class="button" @click="startQuiz">Inicia quiz</v-btn> -->
     </v-container>
     <v-container v-if="quiz === 1" class="section_quiz">
@@ -136,7 +136,8 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-i = !important
+i = !important;
+
 .section_quiz {
   height: auto;
   justify-content: center;
@@ -146,16 +147,32 @@ i = !important
 .card {
   width: 50vw;
 }
-input[type=button]
-  color white
-  background transparent url('/static/consciencia.png') no-repeat
-  height 95px
-  width 400px
+
+input[type=button] {
+  color: white;
+  background: transparent url('/static/consciencia.png') no-repeat;
+  height: 95px;
+  width: 400px;
   // padding 0 0px 0 120px
-.botton
-  &:hover
-    color blue
-@media (max-width: 560px)
-  .card
-    width 100%
+}
+
+.botton {
+  &:hover {
+    color: blue;
+  }
+}
+
+@media (max-width: 560px) {
+  .card {
+    width: 100%;
+  }
+
+  input[type=button] {
+    color: white;
+    background: transparent url('/static/consciencia.png') no-repeat;
+    background-size: contain;
+    height: 75px;
+    width: 300px;
+  }
+}
 </style>
