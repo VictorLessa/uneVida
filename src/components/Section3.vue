@@ -139,6 +139,7 @@ export default {
 i = !important;
 
 .section_quiz {
+  padding 60px
   height: auto;
   justify-content: center;
   display: flex;
