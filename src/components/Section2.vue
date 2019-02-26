@@ -117,6 +117,7 @@ export default {
       this.isActive3 = false
       this.isActive4 = false
       this.isActive5 = false
+      this.videoID = 'cz2jJYWDDaY'
     },
     activeThumb2 () {
       this.isActive1 = false
