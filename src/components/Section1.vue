@@ -16,12 +16,14 @@ export default {
 
 <style scoped lang="stylus">
 .section1 {
-  background url(/static/porques.png) no-repeat
-  background-size cover
+  background: url('/static/porques.png') no-repeat;
+  background-size: cover;
+  background-position: bottom;
   height: 100vh;
   align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  min-height: 600px;
 }
 </style>
