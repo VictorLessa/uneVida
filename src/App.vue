@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <v-container fluid class="nav">
+      <v-container>
+        <img src="/static/autoconhecimento.webp" alt="autoconhecimento">
+      </v-container>
+    </v-container>
     <router-view/>
   </div>
 </template>
@@ -19,5 +24,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.nav {
+  position: absolute;
+  height: 88px;
 }
 </style>
