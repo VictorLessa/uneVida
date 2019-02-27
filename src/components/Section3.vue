@@ -77,6 +77,174 @@
         </v-card-actions>
       </v-card>
     </v-container>
+    <v-container v-if="quiz === 4" class="section_quiz">
+      <v-card class="card">
+        <h3>{{questions[3].text}}</h3>
+        <!-- <v-img
+          class="white--text"
+          height="200px"
+          src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        />-->
+        <v-container fluid>
+          <v-layout fill-height>
+            <v-flex xs12 align-end flexbox>
+              <v-radio-group v-model="result[3]">
+                <v-radio v-for="n in response" :key="n.value" :label="`${n.text}`" :value="n.value"></v-radio>
+              </v-radio-group>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <v-card-actions>
+          <v-spacer/>
+          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
+          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-container>
+    <v-container v-if="quiz === 5" class="section_quiz">
+      <v-card class="card">
+        <h3>{{questions[4].text}}</h3>
+        <!-- <v-img
+          class="white--text"
+          height="200px"
+          src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        />-->
+        <v-container fluid>
+          <v-layout fill-height>
+            <v-flex xs12 align-end flexbox>
+              <v-radio-group v-model="result[4]">
+                <v-radio v-for="n in response" :key="n.value" :label="`${n.text}`" :value="n.value"></v-radio>
+              </v-radio-group>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <v-card-actions>
+          <v-spacer/>
+          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
+          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-container>
+    <v-container v-if="quiz === 6" class="section_quiz">
+      <v-card class="card">
+        <h3>{{questions[5].text}}</h3>
+        <!-- <v-img
+          class="white--text"
+          height="200px"
+          src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        />-->
+        <v-container fluid>
+          <v-layout fill-height>
+            <v-flex xs12 align-end flexbox>
+              <v-radio-group v-model="result[5]">
+                <v-radio v-for="n in response" :key="n.value" :label="`${n.text}`" :value="n.value"></v-radio>
+              </v-radio-group>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <v-card-actions>
+          <v-spacer/>
+          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
+          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-container>
+    <v-container v-if="quiz === 7" class="section_quiz">
+      <v-card class="card">
+        <h3>{{questions[6].text}}</h3>
+        <!-- <v-img
+          class="white--text"
+          height="200px"
+          src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        />-->
+        <v-container fluid>
+          <v-layout fill-height>
+            <v-flex xs12 align-end flexbox>
+              <v-radio-group v-model="result[6]">
+                <v-radio v-for="n in response" :key="n.value" :label="`${n.text}`" :value="n.value"></v-radio>
+              </v-radio-group>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <v-card-actions>
+          <v-spacer/>
+          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
+          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-container>
+    <v-container v-if="quiz === 8" class="section_quiz">
+      <v-card class="card">
+        <h3>{{questions[7].text}}</h3>
+        <!-- <v-img
+          class="white--text"
+          height="200px"
+          src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        />-->
+        <v-container fluid>
+          <v-layout fill-height>
+            <v-flex xs12 align-end flexbox>
+              <v-radio-group v-model="result[7]">
+                <v-radio v-for="n in response" :key="n.value" :label="`${n.text}`" :value="n.value"></v-radio>
+              </v-radio-group>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <v-card-actions>
+          <v-spacer/>
+          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
+          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-container>
+    <v-container v-if="quiz === 9" class="section_quiz">
+      <v-card class="card">
+        <h3>{{questions[8].text}}</h3>
+        <!-- <v-img
+          class="white--text"
+          height="200px"
+          src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        />-->
+        <v-container fluid>
+          <v-layout fill-height>
+            <v-flex xs12 align-end flexbox>
+              <v-radio-group v-model="result[8]">
+                <v-radio v-for="n in response" :key="n.value" :label="`${n.text}`" :value="n.value"></v-radio>
+              </v-radio-group>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <v-card-actions>
+          <v-spacer/>
+          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
+          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-container>
+    <v-container v-if="quiz === 10" class="section_quiz">
+      <v-card class="card">
+        <h3>{{questions[9].text}}</h3>
+        <!-- <v-img
+          class="white--text"
+          height="200px"
+          src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        />-->
+        <v-container fluid>
+          <v-layout fill-height>
+            <v-flex xs12 align-end flexbox>
+              <v-radio-group v-model="result[9]">
+                <v-radio v-for="n in response" :key="n.value" :label="`${n.text}`" :value="n.value"></v-radio>
+              </v-radio-group>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <v-card-actions>
+          <v-spacer/>
+          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
+          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-container>
   </div>
 </template>
 
@@ -87,17 +255,26 @@ export default {
     return {
       quiz: 0,
       index: 0,
-      result: [null, null, null],
+      result: [null, null, null, null, null, null, null, null, null, null],
       radioGroup: 0,
       response: [
-        { text: "Sim", value: 1 },
-        { text: "Não", value: 2 },
-        { text: "Talvez", value: 3 }
+        { text: "Discordo totalmente", value: 1 },
+        { text: "Discordo em partes", value: 2 },
+        { text: "Indiferente", value: 3 },
+        { text: "Concordo em partes", value: 4 },
+        { text: "Concordo totalmente", value: 5 }
       ],
       questions: [
-        { text: "Vc gosta de carnaval?" },
-        { text: "Vc gosta de broquinho?" },
-        { text: "Vc é igual a vinicios?" }
+        { text: '1. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?' },
+        { text: '2. Você sente que "mata um leão por dia"? Que vive e trabalha apenas para sustentar você e/ou sua familia no futuro?' },
+        { text: '3. Você acredita que a felicidade se resume ao bem-estar físico e ao prazer sexual?' },
+        { text: '4. Você busca incansavelmente por reconhecimento, prestígio, ascenção social e/ou poder?' },
+        { text: '5. Você se pergunta frequentemente questões do tipo "Quem sou eu?", "Qual o meu propósito?" etc.?' },
+        { text: '6. Você procura conhecimentos de diversas religiões e dogmas para investigar a espiritualidade?' },
+        { text: '7. Você sente que já tem bastante conhecimento espiritual mas ainda está confuso?' },
+        { text: '8. Você tem convicção de que a vida é espiritual, mas às vezes tem ataques de dúvidas?' },
+        { text: '9. Você está comprometido com a sua espiritualidade e sente que ela é mais importante que assuntos mundanos, como trabalho, prazer ou fortuna?' },
+        { text: '10. Você sente que se reintegrou ao Infinito Ser Divino, tenho chegado ao mesmo estado de Buda e de Cristo?' },
       ]
     };
   },
@@ -111,9 +288,9 @@ export default {
       }
     },
     next() {
-      if (this.quiz < 3) {
+      if (this.quiz < 10) {
         this.quiz += 1;
-      } else if (this.quiz === 3) {
+      } else if (this.quiz === 10) {
         for (let i = 0; i < this.result.length; i++) {
           if (this.result[i] === null) {
             alert("esta faltando respostas");
