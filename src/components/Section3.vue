@@ -266,7 +266,7 @@ export default {
       this.quiz = 1;
     },
     preview() {
-      if (this.quiz > 1) {
+      if (this.quiz > 1) {1
         this.quiz -= 1;
       }
     },
