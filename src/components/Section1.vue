@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="section1">
-    <h1>Texto bonito para une vida</h1>
-    <p>Paragrafo bonito para uneVida</p>
+    <h1 style="color: white">Em que direção seguir</h1>
+    <p style="color: white">Existe um momento na vida onde todos começarão a questionar os seus princípios, e com isso a busca das resposta é apenas a consequência de uma série de fatores a serem desvendados.</p>
   </v-container>
 </template>
 

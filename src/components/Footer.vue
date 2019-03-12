@@ -1,6 +1,9 @@
 <template>
   <v-container fluid class="footer">
-    <p>Footer bonito para UneVida</p>
+    <p style="font-weight: 400">Email: portal@unevida.com.br<br>
+Telefone: (21) 3789-5621 | (21) 3659-8974<br>
+Copyright © 2018 Portal UneVida Inc., Todos os direitos reservados.<br> 
+Termos e condições | Política de privacidade</p>
   </v-container>
 </template>
 

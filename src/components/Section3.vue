@@ -25,8 +25,8 @@
         <span>1/10</span>
         <v-card-actions>
           <v-spacer/>
-          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
-          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+          <v-btn flat color="orange" @click="preview"><span style="text-transform: capitalize">Voltar</span></v-btn>
+          <v-btn flat color="orange" @click="next"><span style="text-transform: capitalize">Proxima</span></v-btn>
         </v-card-actions>
       </v-card>
     </v-container>
@@ -50,8 +50,8 @@
         <span>2/10</span>
         <v-card-actions>
           <v-spacer/>
-          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
-          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+          <v-btn flat color="orange" @click="preview"><span style="text-transform: capitalize">Voltar</span></v-btn>
+          <v-btn flat color="orange" @click="next"><span style="text-transform: capitalize">Proxima</span></v-btn>
         </v-card-actions>
       </v-card>
     </v-container>
@@ -75,8 +75,8 @@
         <span>3/10</span>
         <v-card-actions>
           <v-spacer/>
-          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
-          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+          <v-btn flat color="orange" @click="preview"><span style="text-transform: capitalize">Voltar</span></v-btn>
+          <v-btn flat color="orange" @click="next"><span style="text-transform: capitalize">Proxima</span></v-btn>
         </v-card-actions>
       </v-card>
     </v-container>
@@ -100,8 +100,8 @@
         <span>4/10</span>
         <v-card-actions>
           <v-spacer/>
-          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
-          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+          <v-btn flat color="orange" @click="preview"><span style="text-transform: capitalize">Voltar</span></v-btn>
+          <v-btn flat color="orange" @click="next"><span style="text-transform: capitalize">Proxima</span></v-btn>
         </v-card-actions>
       </v-card>
     </v-container>
@@ -125,8 +125,8 @@
         <span>5/10</span>
         <v-card-actions>
           <v-spacer/>
-          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
-          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+          <v-btn flat color="orange" @click="preview"><span style="text-transform: capitalize">Voltar</span></v-btn>
+          <v-btn flat color="orange" @click="next"><span style="text-transform: capitalize">Proxima</span></v-btn>
         </v-card-actions>
       </v-card>
     </v-container>
@@ -150,8 +150,8 @@
         <span>6/10</span>
         <v-card-actions>
           <v-spacer/>
-          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
-          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+          <v-btn flat color="orange" @click="preview"><span style="text-transform: capitalize">Voltar</span></v-btn>
+          <v-btn flat color="orange" @click="next"><span style="text-transform: capitalize">Proxima</span></v-btn>
         </v-card-actions>
       </v-card>
     </v-container>
@@ -175,8 +175,8 @@
         <span>7/10</span>
         <v-card-actions>
           <v-spacer/>
-          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
-          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+          <v-btn flat color="orange" @click="preview"><span style="text-transform: capitalize">Voltar</span></v-btn>
+          <v-btn flat color="orange" @click="next"><span style="text-transform: capitalize">Proxima</span></v-btn>
         </v-card-actions>
       </v-card>
     </v-container>
@@ -200,8 +200,8 @@
         <span>8/10</span>
         <v-card-actions>
           <v-spacer/>
-          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
-          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+          <v-btn flat color="orange" @click="preview"><span style="text-transform: capitalize">Voltar</span></v-btn>
+          <v-btn flat color="orange" @click="next"><span style="text-transform: capitalize">Proxima</span></v-btn>
         </v-card-actions>
       </v-card>
     </v-container>
@@ -225,8 +225,8 @@
         <span>9/10</span>
         <v-card-actions>
           <v-spacer/>
-          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
-          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+          <v-btn flat color="orange" @click="preview"><span style="text-transform: capitalize">Voltar</span></v-btn>
+          <v-btn flat color="orange" @click="next"><span style="text-transform: capitalize">Proxima</span></v-btn>
         </v-card-actions>
       </v-card>
     </v-container>
@@ -250,10 +250,13 @@
         <span>10/10</span>
         <v-card-actions>
           <v-spacer/>
-          <v-btn flat color="orange" @click="preview">Voltar</v-btn>
-          <v-btn flat color="orange" @click="next">Proxima</v-btn>
+          <v-btn flat color="orange" @click="preview"><span style="text-transform: capitalize">Voltar</span></v-btn>
+          <v-btn flat color="orange" @click="next"><span style="text-transform: capitalize">Proxima</span></v-btn>
         </v-card-actions>
       </v-card>
+    </v-container>
+    <v-container>
+      <div class="fb-share-button" data-href="https://www.youtube.com/" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhar</a></div>
     </v-container>
   </div>
 </template>
@@ -411,7 +414,6 @@ export default {
 i = !important;
 
 .section_quiz {
-  padding 60px
   height: auto;
   justify-content: center;
   display: flex;

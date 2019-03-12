@@ -43,4 +43,11 @@ img
   height 100px
   background-color #9d9d9d !important
   opacity .8
+h1, h2, h3
+  margin-bottom 20px
+p
+  width 70vw
+  margin 0 auto
+.v-card
+  box-shadow none
 </style>
