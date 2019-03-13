@@ -13,39 +13,39 @@
           />
         </v-flex>
         <v-flex lg9>
-          <Hooper :itemsToSlide="1" :itemsToShow="5" :infiniteScroll="true">
+          <Hooper :itemsToSlide="1" :itemsToShow="4" :infiniteScroll="true">
             <Slide>
               <div class="list_thumb" @click="activeThumb1" v-bind:class="{ active: isActive1 }">
                 <div class="thumb">
-                  <img src="/static/thumb2.jpeg" alt="">
+                  <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
             </Slide>
             <Slide>
               <div @click="activeThumb2" v-bind:class="{ active: isActive2 }">
                 <div class="thumb">
-                  <img src="/static/thumb1.jpeg" alt="">
+                  <img src="/static/thumb1.jpeg" alt>
                 </div>
               </div>
             </Slide>
             <Slide>
               <div @click="activeThumb3" v-bind:class="{ active: isActive3 }">
                 <div class="thumb">
-                  <img src="/static/thumb2.jpeg" alt="">
+                  <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
             </Slide>
             <Slide>
               <div @click="activeThumb4" v-bind:class="{ active: isActive4 }">
                 <div class="thumb">
-                  <img src="/static/thumb2.jpeg" alt="">
+                  <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
             </Slide>
             <Slide>
               <div @click="activeThumb5" v-bind:class="{ active: isActive5 }">
                 <div class="thumb">
-                  <img src="/static/thumb2.jpeg" alt="">
+                  <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
             </Slide>
@@ -66,23 +66,23 @@
 </template>
 
 <script>
-  import { 
-    Hooper,
-    Slide,
-    Progress as HooperProgress,
-    Pagination as HooperPagination,
-    Navigation as HooperNavigation
-    } from 'hooper';
+import {
+  Hooper,
+  Slide,
+  Progress as HooperProgress,
+  Pagination as HooperPagination,
+  Navigation as HooperNavigation
+} from "hooper";
 // import VuePerfectScrollbar from "vue-perfect-scrollbar";
-import 'hooper/dist/hooper.css';
+import "hooper/dist/hooper.css";
 // import Slider from "./Slider";
 export default {
   name: "Section2",
   data() {
     return {
       hooperSettings: {
-          itemsToShow: 2,
-          centerMode: true
+        itemsToShow: 2,
+        centerMode: true
       },
       active: [false, false, false, false],
       isActive1: false,
@@ -90,7 +90,7 @@ export default {
       isActive3: false,
       isActive4: false,
       isActive5: false,
-      videoID: 'uLHpfDmIiNk'
+      videoID: "uLHpfDmIiNk"
     };
   },
   components: {
@@ -101,8 +101,7 @@ export default {
     HooperNavigation
     // Slider
   },
-  watch: {
-  },
+  watch: {},
   methods: {
     card_bottom(index) {
       for (let i = 0; i < this.active.length; i++) {
@@ -110,41 +109,41 @@ export default {
       }
       this.active[index] = 1;
     },
-    activeThumb1 () {
-      this.isActive1 = true
-      this.isActive2 = false
-      this.isActive3 = false
-      this.isActive4 = false
-      this.isActive5 = false
-      this.videoID = 'cz2jJYWDDaY'
+    activeThumb1() {
+      this.isActive1 = true;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
+      this.videoID = "cz2jJYWDDaY";
     },
-    activeThumb2 () {
-      this.isActive1 = false
-      this.isActive2 = true
-      this.isActive3 = false
-      this.isActive4 = false
-      this.isActive5 = false
+    activeThumb2() {
+      this.isActive1 = false;
+      this.isActive2 = true;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
     },
-    activeThumb3 () {
-      this.isActive1 = false
-      this.isActive2 = false
-      this.isActive3 = true
-      this.isActive4 = false
-      this.isActive5 = false
+    activeThumb3() {
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = true;
+      this.isActive4 = false;
+      this.isActive5 = false;
     },
-    activeThumb4 () {
-      this.isActive1 = false
-      this.isActive2 = false
-      this.isActive3 = false
-      this.isActive4 = true
-      this.isActive5 = false
+    activeThumb4() {
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = true;
+      this.isActive5 = false;
     },
-    activeThumb5 () {
-      this.isActive1 = true
-      this.isActive2 = false
-      this.isActive3 = false
-      this.isActive4 = false
-      this.isActive5 = true
+    activeThumb5() {
+      this.isActive1 = true;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = true;
     }
   }
 };
@@ -152,8 +151,10 @@ export default {
 <style scoped lang="stylus">
 i = !important;
 
-.section_2
-  padding 60px
+.section_2 {
+  padding: 60px;
+}
+
 .active {
   background: red i;
 }
@@ -187,25 +188,41 @@ i = !important;
     background: #303030;
   }
 }
-.hooper-next, .hooper-prev
-  height 100px
-  background-color white i
-.hooper-navigation
-  .hooper-next
-    height 100px i
-    background-color white i
-.thumb
-  width auto
-  height 100px
-  margin-bottom 5px
-  img 
-    height 100px
-.hooper
-  height 100px i
-.hooper-slide
-  width auto i
-  height auto i
-  margin 0 2px
+
+.hooper-next, .hooper-prev {
+  height: 100px;
+  background-color: white i;
+}
+
+.hooper-navigation {
+  .hooper-next {
+    height: 100px i;
+    background-color: white i;
+  }
+}
+
+.thumb {
+  width: auto;
+  height: 100px;
+  margin-bottom: 5px;
+
+  img {
+    height: 100px;
+  }
+}
+
+.hooper {
+  height: 100px i;
+  width: 720px;
+  margin: 0 auto;
+}
+
+.hooper-slide {
+  width: auto i;
+  height: auto i;
+  margin: 0 2px;
+}
+
 @media (max-width: 560px) {
   .playYoutube {
     width: 100%;
