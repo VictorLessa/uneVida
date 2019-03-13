@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>Faça o quiz</h2>
-    <v-container v-if="show">
+    <h2>Faça o teste e confira qual o seu momento atual</h2>
+    <div v-if="show">
       <v-container v-if="quiz === 0" class="section_quiz">
         <v-layout fill-height align-center justify-center>
           <!-- <input type="image" src="/static/consciencia.png" name="Iniciar" value="Inicia quiz"/> -->
@@ -11,6 +11,14 @@
       </v-container>
       <v-container v-if="quiz === 1" class="section_quiz">
         <v-card class="card">
+          <div>
+            <v-progress-linear
+              color="secondary"
+              background-color="pink lighten-3"
+              height="10"
+              value="15"
+            ></v-progress-linear>
+          </div>
           <h3>{{ questions[0].text }}</h3>
           <!-- <v-img
           class="white--text"
@@ -364,7 +372,7 @@
           >Compartilhar</a>
         </div>
       </v-container>
-    </v-container>
+    </div>
     <div v-else>
       <getEmail/>
     </div>
@@ -409,32 +417,32 @@ export default {
       // 40 iluminação
       this.show = false;
       if (result <= 10) {
-        alert("Sobrevivente");
+        // alert("Sobrevivente");
       } else if (result >= 11 && result <= 14) {
-        alert("Segurança");
+        // alert("Segurança");
       } else if (result >= 15 && result <= 18) {
-        alert("Sensação");
+        // alert("Sensação");
       } else if (result >= 19 && result <= 22) {
-        alert("Dominio");
+        // alert("Dominio");
       } else if (result >= 23 && result <= 26) {
-        alert("Noite escura");
+        // alert("Noite escura");
       } else if (result >= 27 && result <= 30) {
-        alert("busca");
+        // alert("busca");
       } else if (result >= 31 && result <= 33) {
-        alert("primeiro");
+        // alert("primeiro");
       } else if (result >= 34 && result <= 36) {
-        alert("segundo");
+        // alert("segundo");
       } else if (result >= 37 && result <= 39) {
-        alert("comprometimento");
+        // alert("comprometimento");
       } else if (result >= 40) {
-        alert("iluminação");
+        // alert("iluminação");
       }
     }
   },
   data() {
     return {
       quiz: 0,
-      show: false,
+      show: true,
       index: 0,
       result: [null, null, null, null, null, null, null, null, null, null],
       radioGroup: 0,

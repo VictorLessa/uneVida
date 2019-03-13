@@ -2,7 +2,7 @@
   <div id="app">
     <v-container fluid class="nav">
       <v-container>
-        <img src="/static/autoconhecimento.webp" alt="autoconhecimento">
+        <img src="/static/logo_unevida.svg" alt="autoconhecimento">
       </v-container>
     </v-container>
     <router-view/>
@@ -40,14 +40,28 @@ img
 }
 
 .hooper-next, .hooper-prev
-  height 100px
-  background-color #9d9d9d !important
+  height 80px
+  background-color white !important
   opacity .8
 h1, h2, h3
   margin-bottom 20px
 p
   width 70vw
   margin 0 auto
+  font-weight 400
 .v-card
   box-shadow none
+
+.icon_hover
+  position: absolute;
+  z-index: 5;
+  /* top: 30px; */
+  opacity: 0;
+  height: 80px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover
+    opacity 1
 </style>

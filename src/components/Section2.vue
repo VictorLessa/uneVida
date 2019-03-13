@@ -7,44 +7,59 @@
             id="ytplayer"
             class="playYoutube"
             type="text/html"
-            :src="`https://www.youtube.com/embed/${videoID}`"
+            :src="`https://www.youtube.com/embed/${videoID}?version=3&autoplay=1&origin=http://localhost:8080`"
             frameborder="0"
             allowfullscreen
           />
         </v-flex>
         <v-flex lg9>
-          <Hooper :itemsToSlide="1" :itemsToShow="4" :infiniteScroll="true">
+          <Hooper :itemsToShow="3">
             <Slide>
               <div class="list_thumb" @click="activeThumb1" v-bind:class="{ active: isActive1 }">
                 <div class="thumb">
+                  <div class="icon_hover" v-bind:class="{ active: isActive1 }">
+                    <v-icon @click="activeThumb1" x-large color="white">play_arrow</v-icon>
+                  </div>
                   <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
             </Slide>
             <Slide>
-              <div @click="activeThumb2" v-bind:class="{ active: isActive2 }">
+              <div class="list_thumb" @click="activeThumb2" v-bind:class="{ active: isActive2 }">
                 <div class="thumb">
-                  <img src="/static/thumb1.jpeg" alt>
-                </div>
-              </div>
-            </Slide>
-            <Slide>
-              <div @click="activeThumb3" v-bind:class="{ active: isActive3 }">
-                <div class="thumb">
+                  <div class="icon_hover" v-bind:class="{ active: isActive2 }">
+                    <v-icon @click="activeThumb2" x-large color="white">play_arrow</v-icon>
+                  </div>
                   <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
             </Slide>
             <Slide>
-              <div @click="activeThumb4" v-bind:class="{ active: isActive4 }">
+              <div class="list_thumb" @click="activeThumb3" v-bind:class="{ active: isActive3 }">
                 <div class="thumb">
+                  <div class="icon_hover" v-bind:class="{ active: isActive3 }">
+                    <v-icon  @click="activeThumb3" x-large color="white">play_arrow</v-icon>
+                  </div>
                   <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
             </Slide>
             <Slide>
-              <div @click="activeThumb5" v-bind:class="{ active: isActive5 }">
+              <div class="list_thumb" @click="activeThumb4" v-bind:class="{ active: isActive4 }">
                 <div class="thumb">
+                  <div class="icon_hover" v-bind:class="{ active: isActive4 }">
+                    <v-icon @click="activeThumb4" x-large color="white">play_arrow</v-icon>
+                  </div>
+                  <img src="/static/thumb2.jpeg" alt>
+                </div>
+              </div>
+            </Slide>
+            <Slide>
+              <div class="list_thumb" @click="activeThumb5" v-bind:class="{ active: isActive5 }">
+                <div class="thumb">
+                  <div class="icon_hover" v-bind:class="{ active: isActive5 }">
+                    <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
+                  </div>
                   <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
@@ -57,7 +72,7 @@
     <v-container>
       <v-layout>
         <v-flex>
-          <h2>Sub titulo bonito pra uneVida</h2>
+          <h2>Os 10 momentos da jornada Humana</h2>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
         </v-flex>
       </v-layout>
@@ -90,7 +105,7 @@ export default {
       isActive3: false,
       isActive4: false,
       isActive5: false,
-      videoID: "uLHpfDmIiNk"
+      videoID: "2dVyPvdMtwg"
     };
   },
   components: {
@@ -115,7 +130,7 @@ export default {
       this.isActive3 = false;
       this.isActive4 = false;
       this.isActive5 = false;
-      this.videoID = "cz2jJYWDDaY";
+      this.videoID = '2dVyPvdMtwg'
     },
     activeThumb2() {
       this.isActive1 = false;
@@ -123,6 +138,7 @@ export default {
       this.isActive3 = false;
       this.isActive4 = false;
       this.isActive5 = false;
+      this.videoID = '2dVyPvdMtwg'
     },
     activeThumb3() {
       this.isActive1 = false;
@@ -130,6 +146,7 @@ export default {
       this.isActive3 = true;
       this.isActive4 = false;
       this.isActive5 = false;
+      this.videoID = 'mu3DMgjN2tE'
     },
     activeThumb4() {
       this.isActive1 = false;
@@ -137,26 +154,30 @@ export default {
       this.isActive3 = false;
       this.isActive4 = true;
       this.isActive5 = false;
+      this.videoID = '2dVyPvdMtwg'
     },
     activeThumb5() {
-      this.isActive1 = true;
+      this.isActive1 = false;
       this.isActive2 = false;
       this.isActive3 = false;
       this.isActive4 = false;
       this.isActive5 = true;
+      this.videoID = '2dVyPvdMtwg'
     }
   }
 };
 </script>
 <style scoped lang="stylus">
 i = !important;
-
+p
+  width 720px
 .section_2 {
   padding: 60px;
 }
-
 .active {
-  background: red i;
+  opacity 1
+  background-color  rgba(54, 41, 46, 0.3)
+  border-bottom solid 3px red
 }
 
 .scroll-area {
@@ -189,30 +210,28 @@ i = !important;
   }
 }
 
-.hooper-next, .hooper-prev {
-  height: 100px;
-  background-color: white i;
-}
-
 .hooper-navigation {
   .hooper-next {
-    height: 100px i;
+    height: 80px i;
     background-color: white i;
   }
 }
 
-.thumb {
+.thumb
   width: auto;
-  height: 100px;
+  height: 80px;
   margin-bottom: 5px;
-
-  img {
-    height: 100px;
-  }
-}
+  display flex
+  justify-content center
+  &:hover
+    z-index 105
+    background-color  rgba(54, 41, 46, 0.3)
+  img
+    height: 80px;
+    z-index -1;
 
 .hooper {
-  height: 100px i;
+  height: 80px i;
   width: 720px;
   margin: 0 auto;
 }
@@ -223,25 +242,36 @@ i = !important;
   margin: 0 2px;
 }
 
-@media (max-width: 560px) {
-  .playYoutube {
+@media (max-width: 560px)
+  .section_2
+    padding 0
+  .playYoutube
     width: 100%;
     height: 185px;
-  }
 
-  .scroll-area {
+  .hooper
+    height: 80px i;
+    width: 100%;
+    margin: 0 auto;
+
+  p
+    width 100%
+  .scroll-area
     position: relative;
     margin: auto;
     width: auto;
     height: 405px;
     background: black;
     border-radius: 5px;
-  }
-}
 
-@media (max-width: 768px) {
-  .playYoutube {
+
+@media (max-width: 768px)
+  .playYoutube
     width: 100%;
-  }
-}
+  .hooper
+    height: 80px i;
+    width: 100%;
+    margin: 0 auto;
+  p
+    width 100%
 </style>

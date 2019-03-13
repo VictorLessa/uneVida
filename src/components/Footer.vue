@@ -2,8 +2,7 @@
   <v-container fluid class="footer">
     <p style="font-weight: 400">Email: portal@unevida.com.br<br>
 Telefone: (21) 3789-5621 | (21) 3659-8974<br>
-Copyright © 2018 Portal UneVida Inc., Todos os direitos reservados.<br> 
-Termos e condições | Política de privacidade</p>
+Copyright © 2018 Portal UneVida Inc., Todos os direitos reservados.</p>
   </v-container>
 </template>
 
@@ -22,7 +21,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 150px;
   background: url('/static/espiritualidade.png') no-repeat;
   background-size: cover;
   color: white;

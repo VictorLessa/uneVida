@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="section1">
-    <h1 style="color: white">Em que direção seguir</h1>
+    <h1 style="color: white">Em que direção seguir?</h1>
     <p style="color: white">Existe um momento na vida onde todos começarão a questionar os seus princípios, e com isso a busca das resposta é apenas a consequência de uma série de fatores a serem desvendados.</p>
   </v-container>
 </template>
@@ -15,8 +15,10 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.section1 {
-  background: url('/static/porques.png') no-repeat;
+p
+  width 720px
+.section1
+  background: url('/static/caminho_da_alma.png') no-repeat;
   background-size: cover;
   background-position: bottom;
   height: 100vh;
@@ -25,5 +27,13 @@ export default {
   justify-content: center;
   flex-direction: column;
   min-height: 600px;
-}
+
+
+@media (max-width: 560px)
+  p
+    width 100%
+
+@media (max-width: 768px)
+  p
+    width 100%
 </style>

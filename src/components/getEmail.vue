@@ -1,8 +1,8 @@
 <template>
-  <v-container class="response_quiz">
+  <v-container grid-list-md class="response_quiz">
     <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</h4>
-    <v-layout row align-center fill-height justify-center>
-      <v-flex lg3>
+    <v-layout row wrap justify-center>
+      <v-flex md5 sm5 lg3 xs12>
         <v-text-field
           v-model="email"
           v-validate="'required|email'"
@@ -12,7 +12,9 @@
           required
         ></v-text-field>
       </v-flex>
-      <v-btn round color="primary" dark>Enviar Email</v-btn>
+      <v-flex md3 sm3 lg2 xs12>
+        <v-btn round color="#7a3acc"><span style="color: white; text-transform: capitalize">Enviar Email</span></v-btn>
+      </v-flex>
     </v-layout>
     <div
       class="fb-share-button"
@@ -60,13 +62,22 @@ export default {
 };
 </script>
 
-<style>
-.response_quiz {
+<style lang="stylus">
+.response_quiz
   height: auto;
   padding-bottom: 150px;
-}
-h4 {
-  width: 50%;
+
+h4
+  width: 720px;
   margin: 0px auto 30px auto;
-}
+  font-weight: 400
+
+@media (max-width: 560px)
+  h4
+    width 100%
+    margin 0
+
+@media (max-width: 768px)
+  h4
+    width 100%
 </style>
