@@ -1,7 +1,9 @@
 <template>
   <v-container fluid class="section1">
     <h1 style="color: white">Em que direção seguir?</h1>
-    <p style="color: white">Existe um momento na vida onde todos começarão a questionar os seus princípios, e com isso a busca das resposta é apenas a consequência de uma série de fatores a serem desvendados.</p>
+    <p style="color: white">Existe um momento na vida onde todos começarão a questionar<br>
+os seus princípios e com isso a busca das respostas é apenas a<br>
+consequência de uma série de fatores a serem desvendados.</p>
   </v-container>
 </template>
 
