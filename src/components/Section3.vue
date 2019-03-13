@@ -594,9 +594,11 @@ h2 {
 
 input[type=button] {
   color: white;
-  background: transparent url('/static/consciencia.png') no-repeat;
-  height: 95px;
-  width: 400px;
+  background: transparent url('/static/consciencia.svg') no-repeat;
+  height: 108px;
+  width: 332px;
+  background-position-y: 7px;
+  background-size: 291px;
   // padding 0 0px 0 120px
 }
 

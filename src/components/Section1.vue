@@ -1,9 +1,19 @@
 <template>
-  <v-container fluid class="section1">
-    <h1 style="color: white">Em que direção seguir?</h1>
-    <p style="color: white">Existe um momento na vida onde todos começarão a questionar<br>
-os seus princípios e com isso a busca das respostas é apenas a<br>
-consequência de uma série de fatores a serem desvendados.</p>
+  <v-container text-xs-left fluid class="section1">
+    <v-layout align-start justify-center column fill-height>
+      <div class="elevation">
+        <img src="/static/logo_unevida.svg" alt="autoconhecimento">
+      </div>
+      <div class="elevation">
+        <h1 style="color: white">Em que direção seguir?</h1>
+        <p style="color: white">Existe um momento na vida onde todos começarão a questionar<br>
+    os seus princípios e com isso a busca das respostas é apenas a<br>
+    consequência de uma série de fatores a serem desvendados.</p>
+      </div>
+      <div class="elevation">
+        <input class="botton scrollactive-item" href="#section2" type="button" value="Saiba mais">
+      </div>
+    </v-layout>
   </v-container>
 </template>
 
@@ -24,13 +34,18 @@ p
   background-size: cover;
   background-position: bottom;
   height: 100vh;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   min-height: 600px;
 
+.elevation
+  margin 30px 50px
 
+input[type=button]
+  color: white;
+  background: transparent url('/static/consciencia.svg') no-repeat;
+  height: 108px;
+  width: 332px;
+  background-position-y: 7px;
+  background-size: 291px;
 @media (max-width: 560px)
   p
     width 100%

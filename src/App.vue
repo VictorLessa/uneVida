@@ -1,8 +1,18 @@
 <template>
   <div id="app">
+    <v-toolbar
+        flat
+        absolute
+        color="transparent"
+      >
+
+          <v-spacer></v-spacer>
+            Contato
+
+      </v-toolbar>
     <v-container fluid class="nav">
       <v-container>
-        <img src="/static/logo_unevida.svg" alt="autoconhecimento">
+        <!-- <img src="/static/logo_unevida.svg" alt="autoconhecimento"> -->
       </v-container>
     </v-container>
     <router-view/>
@@ -30,6 +40,9 @@ h2
   font-weight 700
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900');
+
+h1
+  font-size 36px
 
 img
   width 150px
