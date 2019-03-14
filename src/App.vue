@@ -15,13 +15,18 @@
         <!-- <img src="/static/logo_unevida.svg" alt="autoconhecimento"> -->
       </v-container>
     </v-container>
-    <router-view/>
+    <Home/>
+    <!-- <router-view/> -->
   </div>
 </template>
 
 <script>
+import Home from './components/HelloWorld'
 export default {
-  name: "App"
+  name: "App",
+  components: {
+    Home
+  }
 };
 </script>
 
@@ -39,7 +44,7 @@ export default {
 h2
   font-weight 700
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900');
 
 h1
   font-size 36px
@@ -53,7 +58,7 @@ img
 }
 
 .hooper-next, .hooper-prev
-  height 80px
+  height 120px
   background-color white !important
   opacity .8
 h1, h2, h3
@@ -71,7 +76,7 @@ p
   /* top: 30px; */
   opacity: 0;
   height: 80px;
-  width: 150px;
+  width: 160px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -11,7 +11,7 @@
     consequência de uma série de fatores a serem desvendados.</p>
       </div>
       <div class="elevation">
-        <input class="botton scrollactive-item" href="#section2" type="button" value="Saiba mais">
+        <input class="botton" @click="$vuetify.goTo('#section2', {duration: 300, offset: 0, easing: 'easeInOutCubic'})" type="button" value="Saiba mais">
       </div>
     </v-layout>
   </v-container>
@@ -39,6 +39,9 @@ p
 .elevation
   margin 30px 50px
 
+.botton
+  &:focus
+    outline none
 input[type=button]
   color: white;
   background: transparent url('/static/consciencia.svg') no-repeat;
@@ -49,7 +52,10 @@ input[type=button]
 @media (max-width: 560px)
   p
     width 100%
-
+  .elevation
+    margin 30px 0px
+  br
+    display none
 @media (max-width: 768px)
   p
     width 100%

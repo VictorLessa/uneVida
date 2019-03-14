@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="section_quiz">
     <h2>Faça o teste e confira qual o seu momento atual</h2>
     <div v-if="show">
       <v-container v-if="quiz === 0" class="section_quiz">
@@ -357,7 +357,7 @@
           </v-card-actions>
         </v-card>
       </v-container>
-      <v-container>
+      <!-- <v-container>
         <div
           class="fb-share-button"
           data-href="https://www.youtube.com/"
@@ -371,7 +371,7 @@
             class="fb-xfbml-parse-ignore"
           >Compartilhar</a>
         </div>
-      </v-container>
+      </v-container> -->
     </div>
     <div v-else>
       <getEmail/>
@@ -570,8 +570,6 @@ i = !important;
 
 .section_quiz {
   height: auto;
-  justify-content: center;
-  display: flex;
 }
 
 h2 {
@@ -608,17 +606,21 @@ input[type=button] {
   }
 }
 
-@media (max-width: 560px) {
-  .card {
+@media (max-width: 560px)
+  .card
     width: 100%;
-  }
 
-  input[type=button] {
+  .section_quiz
+    padding 40px 0
+
+  h2
+    margin 0 10px
+
+  input[type=button]
     color: white;
     background: transparent url('/static/consciencia.png') no-repeat;
     background-size: contain;
     height: 75px;
     width: 300px;
-  }
-}
+
 </style>

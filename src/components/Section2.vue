@@ -77,12 +77,12 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container grid-list-md text-xs-center>
+    <v-container grid-list-md text-xs-center class="section_2_1">
       <v-layout row wrap align-center>
-        <v-flex xs6>
+        <v-flex lg6 xs12>
           <p class="videoNome">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
         </v-flex>
-        <v-flex xs6>
+        <v-flex lg6 xs12>
           <span class="citacao">"Cada ser humano é<br> uma semente da vida,<br> que busca florescer,<br> frutificar."</span><br><br><p class="author">Tom Vilhena</p>
         </v-flex>
       </v-layout>
@@ -259,7 +259,7 @@ p
     z-index -1;
 
 .hooper {
-  height: 120px i;
+  height: 120px;
   width: 720px;
   margin: 0 auto;
 }
@@ -278,13 +278,17 @@ p
 
 @media (max-width: 560px)
   .section_2
-    padding 0
+    padding 40px 0
+  .section_2_1
+    padding 0px 10px
+  h2
+    margin-bottom 40px
   .playYoutube
     width: 100%;
     height: 185px;
 
   .hooper
-    height: 80px i;
+    height: 120px;
     width: 100%;
     margin: 0 auto;
 
@@ -299,11 +303,11 @@ p
     border-radius: 5px;
 
 
-@media (max-width: 768px)
+@media (min-width: 560.1px) and (max-width: 768px)
   .playYoutube
     width: 100%;
   .hooper
-    height: 80px i;
+    height: 120px;
     width: 100%;
     margin: 0 auto;
   p
