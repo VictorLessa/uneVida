@@ -1,6 +1,9 @@
 <template>
   <div>
     <v-container class="section_2" id="section2">
+      <v-layout justify-center>
+        <h2>Em que nível de consciencia você está?</h2>
+      </v-layout>
       <v-layout wrap row style="justify-content: center">
         <v-flex>
           <iframe
@@ -15,7 +18,7 @@
         <v-flex lg9>
           <Hooper :itemsToShow="3">
             <Slide>
-              <div class="list_thumb" @click="activeThumb1" v-bind:class="{ active: isActive1 }">
+              <div class="list_thumb" @click="activeThumb1">
                 <div class="thumb">
                   <div class="icon_hover" v-bind:class="{ active: isActive1 }">
                     <v-icon @click="activeThumb1" x-large color="white">play_arrow</v-icon>
@@ -23,9 +26,10 @@
                   <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
+              <p class="VideoNome">Os 10 níveis da<br> consciência humana</p>
             </Slide>
             <Slide>
-              <div class="list_thumb" @click="activeThumb2" v-bind:class="{ active: isActive2 }">
+              <div class="list_thumb" @click="activeThumb2">
                 <div class="thumb">
                   <div class="icon_hover" v-bind:class="{ active: isActive2 }">
                     <v-icon @click="activeThumb2" x-large color="white">play_arrow</v-icon>
@@ -33,6 +37,7 @@
                   <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
+              <p class="VideoNome">O meu momento é<br> de sobrevivencia?</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb3" v-bind:class="{ active: isActive3 }">
@@ -43,6 +48,7 @@
                   <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
+              <p class="VideoNome">Já passei por meu<br> momento de segurança?</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb4" v-bind:class="{ active: isActive4 }">
@@ -53,6 +59,7 @@
                   <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
+              <p class="VideoNome">A busca incanssante<br> pela sensação de prazer</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb5" v-bind:class="{ active: isActive5 }">
@@ -63,17 +70,20 @@
                   <img src="/static/thumb2.jpeg" alt>
                 </div>
               </div>
+              <p class="VideoNome">Os pazeres da emoção<br> e da mente</p>
             </Slide>
             <hooper-navigation slot="hooper-addons"></hooper-navigation>
           </Hooper>
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container>
-      <v-layout>
-        <v-flex>
-          <h2>Os 10 momentos da jornada Humana</h2>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+    <v-container grid-list-md text-xs-center>
+      <v-layout row wrap align-center>
+        <v-flex xs6>
+          <p class="videoNome">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+        </v-flex>
+        <v-flex xs6>
+          <span class="citacao">"Cada ser humano é<br> uma semente da vida,<br> que busca florescer,<br> frutificar."</span><br><br><p class="author">Tom Vilhena</p>
         </v-flex>
       </v-layout>
     </v-container>
@@ -169,8 +179,31 @@ export default {
 </script>
 <style scoped lang="stylus">
 i = !important;
+h2
+  font-family 'Montserrat', sans-serif
+  font-size 2rem
+  font-weight 700
+  margin-bottom 60px
 p
-  width 720px
+  font-family 'Montserrat', sans-serif
+  font-size 1rem
+  font-weight 400
+  width auto
+  text-align left
+
+.citacao
+  font-family 'Montserrat', sans-serif
+  color "#313131"
+  font-size 2rem
+  font-weight 700
+
+.author
+  font-family 'Montserrat', sans-serif
+  font-size 1.5rem
+  color "#313131"
+  text-align center
+  font-weight 400
+
 .section_2 {
   padding: 60px;
 }
@@ -210,15 +243,9 @@ p
   }
 }
 
-.hooper-navigation {
-  .hooper-next {
-    height: 80px i;
-    background-color: white i;
-  }
-}
 
 .thumb
-  width: auto;
+  width: 160px;
   height: 80px;
   margin-bottom: 5px;
   display flex
@@ -228,10 +255,11 @@ p
     background-color  rgba(54, 41, 46, 0.3)
   img
     height: 80px;
+    width 160px i
     z-index -1;
 
 .hooper {
-  height: 80px i;
+  height: 120px i;
   width: 720px;
   margin: 0 auto;
 }
@@ -239,8 +267,14 @@ p
 .hooper-slide {
   width: auto i;
   height: auto i;
-  margin: 0 2px;
+  margin: 0 5px;
 }
+
+.VideoNome
+  text-align left
+  font-family 'Montserrat'
+  font-weight 600
+  font-size .9rem
 
 @media (max-width: 560px)
   .section_2
