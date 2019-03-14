@@ -23,7 +23,7 @@
                   <div class="icon_hover" v-bind:class="{ active: isActive1 }">
                     <v-icon @click="activeThumb1" x-large color="white">play_arrow</v-icon>
                   </div>
-                  <img src="/static/thumb2.jpeg" alt>
+                  <img src="/static/momentos.jpg" alt>
                 </div>
               </div>
               <p class="VideoNome">Os 10 níveis da<br> consciência humana</p>
@@ -34,7 +34,7 @@
                   <div class="icon_hover" v-bind:class="{ active: isActive2 }">
                     <v-icon @click="activeThumb2" x-large color="white">play_arrow</v-icon>
                   </div>
-                  <img src="/static/thumb2.jpeg" alt>
+                  <img src="/static/sobrevivencia.jpg" alt>
                 </div>
               </div>
               <p class="VideoNome">O meu momento é<br> de sobrevivencia?</p>
@@ -45,7 +45,7 @@
                   <div class="icon_hover" v-bind:class="{ active: isActive3 }">
                     <v-icon  @click="activeThumb3" x-large color="white">play_arrow</v-icon>
                   </div>
-                  <img src="/static/thumb2.jpeg" alt>
+                  <img src="/static/seguranca.jpg" alt>
                 </div>
               </div>
               <p class="VideoNome">Já passei por meu<br> momento de segurança?</p>
@@ -56,7 +56,7 @@
                   <div class="icon_hover" v-bind:class="{ active: isActive4 }">
                     <v-icon @click="activeThumb4" x-large color="white">play_arrow</v-icon>
                   </div>
-                  <img src="/static/thumb2.jpeg" alt>
+                  <img src="/static/prazer.jpg" alt>
                 </div>
               </div>
               <p class="VideoNome">A busca incanssante<br> pela sensação de prazer</p>
@@ -67,7 +67,7 @@
                   <div class="icon_hover" v-bind:class="{ active: isActive5 }">
                     <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
                   </div>
-                  <img src="/static/thumb2.jpeg" alt>
+                  <img src="/static/dominio.jpg" alt>
                 </div>
               </div>
               <p class="VideoNome">Os pazeres da emoção<br> e da mente</p>
