@@ -40,7 +40,7 @@
               <p class="VideoNome">O meu momento é<br> de sobrevivencia?</p>
             </Slide>
             <Slide>
-              <div class="list_thumb" @click="activeThumb3" v-bind:class="{ active: isActive3 }">
+              <div class="list_thumb" @click="activeThumb3">
                 <div class="thumb">
                   <div class="icon_hover" v-bind:class="{ active: isActive3 }">
                     <v-icon  @click="activeThumb3" x-large color="white">play_arrow</v-icon>
@@ -51,7 +51,7 @@
               <p class="VideoNome">Já passei por meu<br> momento de segurança?</p>
             </Slide>
             <Slide>
-              <div class="list_thumb" @click="activeThumb4" v-bind:class="{ active: isActive4 }">
+              <div class="list_thumb" @click="activeThumb4">
                 <div class="thumb">
                   <div class="icon_hover" v-bind:class="{ active: isActive4 }">
                     <v-icon @click="activeThumb4" x-large color="white">play_arrow</v-icon>
@@ -62,7 +62,7 @@
               <p class="VideoNome">A busca incanssante<br> pela sensação de prazer</p>
             </Slide>
             <Slide>
-              <div class="list_thumb" @click="activeThumb5" v-bind:class="{ active: isActive5 }">
+              <div class="list_thumb" @click="activeThumb5">
                 <div class="thumb">
                   <div class="icon_hover" v-bind:class="{ active: isActive5 }">
                     <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
