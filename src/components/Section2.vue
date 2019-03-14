@@ -16,7 +16,7 @@
           />
         </v-flex>
         <v-flex lg9>
-          <Hooper :itemsToShow="3">
+          <Hooper :itemsToShow="4">
             <Slide>
               <div class="list_thumb" @click="activeThumb1">
                 <div class="thumb">
