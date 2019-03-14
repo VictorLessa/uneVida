@@ -59,7 +59,7 @@ img
 
 .hooper-next, .hooper-prev
   height 120px
-  background-color white !important
+  background-color #313131a8 !important
   opacity .8
 h1, h2, h3
   margin-bottom 20px
