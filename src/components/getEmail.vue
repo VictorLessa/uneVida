@@ -7,7 +7,7 @@
         style="width: 100%; padding: 20px;"
       >
         <h4 style="color: black">Seu resultado é</h4>
-        <h3 style="color: blue">Dominío ou Poder Egoico</h3>
+        <h3 style="color: blue">{{ result }}</h3>
         <p style="color: black">Neste nível, mesmo as necessidades de </p>
         <h4 style="color: black">Gostaria de saber como continuar expandindo sua consciência e saber mais sobre?</h4>
         <p style="color: black">Cadastre seu e-mail para receber um material exclusivo sobre seu nível e</p>

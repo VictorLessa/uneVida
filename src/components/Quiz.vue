@@ -225,6 +225,7 @@ export default {
   data () {
     return {
       count: 1,
+      result: '',
       selected: [],
       questions: [
         '1. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?',
@@ -287,6 +288,37 @@ export default {
       let result = 0
       for (let i = 0; i < this.selected.length; i++) {
         result += this.selected[i]
+      }
+      if (result <= 10) {
+        this.result = 'Sobrevivente'
+        // alert("Sobrevivente");
+      } else if (result >= 11 && result <= 14) {
+        this.result = 'Segurança'
+        // alert("Segurança");
+      } else if (result >= 15 && result <= 18) {
+        this.result = 'Sensação'
+        // alert("Sensação");
+      } else if (result >= 19 && result <= 22) {
+        this.result = 'Dominio'
+        // alert("Dominio");
+      } else if (result >= 23 && result <= 26) {
+        this.result = 'Noite escura'
+        // alert("Noite escura");
+      } else if (result >= 27 && result <= 30) {
+        this.result = 'Busca'
+        // alert("busca");
+      } else if (result >= 31 && result <= 33) {
+        this.result = 'Primeiro'
+        // alert("primeiro");
+      } else if (result >= 34 && result <= 36) {
+        this.result = 'Segundo'
+        // alert("segundo");
+      } else if (result >= 37 && result <= 39) {
+        this.result = 'Comprometimento'
+        // alert("comprometimento");
+      } else if (result >= 40) {
+        this.result = 'iluminação'
+        // alert("iluminação");
       }
       this.show = false
     }
