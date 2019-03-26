@@ -1,83 +1,60 @@
 <template>
-  <v-container grid-list-md class="response_quiz">
-    <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</h4>
-    <v-layout row wrap justify-center>
-      <v-flex md5 sm5 lg3 xs12>
-        <v-text-field
-          v-model="email"
-          v-validate="'required|email'"
-          :error-messages="errors.collect('email')"
-          label="E-mail"
-          data-vv-name="email"
-          required
-        ></v-text-field>
-      </v-flex>
-      <v-flex md3 sm3 lg2 xs12>
-        <v-btn round color="#7a3acc"><span style="color: white; text-transform: capitalize">Enviar Email</span></v-btn>
-      </v-flex>
+  <v-container text-xs-center>
+    <v-layout row wrap>
+      <v-card
+        dark
+        color="#F9FAFC"
+        style="width: 100%; padding: 20px;"
+      >
+        <h4 style="color: black">Seu resultado é</h4>
+        <h3 style="color: blue">Dominío ou Poder Egoico</h3>
+        <p style="color: black">Neste nível, mesmo as necessidades de </p>
+        <h4 style="color: black">Gostaria de saber como continuar expandindo sua consciência e saber mais sobre?</h4>
+        <p style="color: black">Cadastre seu e-mail para receber um material exclusivo sobre seu nível e</p>
+        <v-layout justify-center>
+          <v-flex lg7>
+            <v-text-field
+              label="E-mail"
+              box
+              background-color="white"
+              single-line
+            ></v-text-field>
+          </v-flex>
+          <v-flex lg1>
+            <v-btn
+              color="purple"
+              big
+              dark
+              style="text-transform: capitalize; font-family: Montserrat, sans-serif; font-weight: 600"
+            >
+              Enviar
+            </v-btn>
+          </v-flex>
+        </v-layout>
+      </v-card>
     </v-layout>
-    <div
-      class="fb-share-button"
-      data-href="https://www.youtube.com/"
-      data-layout="button"
-      data-size="large"
-      data-mobile-iframe="true"
-    >
-      <a
-        target="_blank"
-        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
-        class="fb-xfbml-parse-ignore"
-      >Compartilhar</a>
-    </div>
   </v-container>
 </template>
 
 <script>
 export default {
-  $_veeValidate: {
-    validator: "new"
-  },
-  name: "Email",
-  data() {
+  name: "Result",
+  data () {
     return {
-      email: ""
-    };
-  },
-  mounted() {
-    this.$validator.localize("en", this.dictionary);
-  },
 
-  methods: {
-    submit() {
-      this.$validator.validateAll();
-    },
-    clear() {
-      this.name = "";
-      this.email = "";
-      this.select = null;
-      this.checkbox = null;
-      this.$validator.reset();
     }
   }
-};
+}
 </script>
 
 <style lang="stylus">
-.response_quiz
-  height: auto;
-  padding-bottom: 150px;
-
-h4
-  width: 720px;
-  margin: 0px auto 30px auto;
-  font-weight: 400
-
-@media (max-width: 560px)
-  h4
-    width 100%
-    margin 0
-
-@media (max-width: 768px)
-  h4
-    width 100%
+i = !important
+.theme--dark.v-input:not(.v-input--is-disabled) input, .theme--dark.v-input:not(.v-input--is-disabled) textarea
+  color: black i
+.theme--dark.v-label
+  color black i
+.theme--dark.v-btn:not(.v-btn--icon):not(.v-btn--flat)
+  height 56px
+  width: 200px
+  margin 0 0 0 10px
 </style>
