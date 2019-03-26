@@ -1,22 +1,30 @@
 <template>
 <div>
   <h2>Faça o teste e confira qual o seu momento atual</h2>
-  <v-container v-if="quiz === 0" class="section_quiz">
+  <v-container  v-show="show === true" class="section_quiz">
     <v-layout fill-height align-center justify-center>
       <!-- <input type="image" src="/static/consciencia.png" name="Iniciar" value="Inicia quiz"/> -->
-      <input class="botton" @click="startQuiz" type="button" value="Iniciar Quiz">
+      <input class="botton" @click="show = false" type="button" value="Iniciar Quiz">
       <!-- <v-btn class="button" @click="startQuiz">Inicia quiz</v-btn> -->
     </v-layout>
   </v-container>
-  </div>
+  <Quiz v-show="show === false"></Quiz>
+</div>
 </template>
 
 <script>
+import Quiz from './Quiz'
 import getEmail from "./getEmail";
 export default {
   name: "Section3",
+  data () {
+    return {
+      show: true
+    }
+  },
   components: {
-    getEmail
+    getEmail,
+    Quiz
   },
   methods: {
     startQuiz() {

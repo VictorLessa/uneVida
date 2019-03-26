@@ -2,13 +2,12 @@
   <div>
     <Section1/>
     <Section2/>
-    <quiz/>
+    <Section3/>
     <Footer/>
   </div>
 </template>
 <script>
 import Section1 from "@/components/Section1";
-import quiz from "@/components/Quiz";
 import Section2 from "@/components/Section2";
 import Section3 from "@/components/Section3";
 import Footer from "@/components/Footer";
@@ -23,8 +22,7 @@ export default {
     Section1,
     Section2,
     Section3,
-    Footer,
-    quiz
+    Footer
   }
 };
 </script>

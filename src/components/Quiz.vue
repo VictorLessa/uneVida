@@ -39,8 +39,7 @@
           >
             <span style="color: black">{{ questions[count - 1] }}</span>
           </v-card-title>
-          <transition name="fade">
-            <div v-if="count === 1">
+            <div v-if="count === 1" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
@@ -57,9 +56,7 @@
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
-          </transition>
-          <transition name="fade">
-            <div v-if="count === 2">
+            <div v-if="count === 2" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
@@ -76,9 +73,7 @@
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
-          </transition>
-          <transition name="fade">
-            <div v-if="count === 3">
+            <div v-if="count === 3" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
@@ -95,9 +90,7 @@
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
-          </transition>
-          <transition name="bounce">
-            <div v-if="count === 4">
+            <div v-if="count === 4" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
@@ -114,9 +107,7 @@
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
-          </transition>
-          <transition name="bounce">
-            <div v-if="count === 5">
+            <div v-if="count === 5" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
@@ -133,9 +124,7 @@
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
-          </transition>
-          <transition name="bounce">
-            <div v-if="count === 6">
+            <div v-if="count === 6" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
@@ -152,9 +141,7 @@
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
-          </transition>
-          <transition name="bounce">
-            <div v-if="count === 7">
+            <div v-if="count === 7" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
@@ -171,9 +158,7 @@
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
-          </transition>
-          <transition name="bounce">
-            <div v-if="count === 8">
+            <div v-if="count === 8" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
@@ -190,9 +175,7 @@
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
-          </transition>
-          <transition name="bounce">
-            <div v-if="count === 9">
+            <div v-if="count === 9" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
@@ -209,9 +192,7 @@
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
-          </transition>
-          <transition name="bounce">
-            <div v-if="count === 10">
+            <div v-if="count === 10" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
@@ -228,7 +209,6 @@
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
-          </transition>
       </v-card>
     </v-layout>
   </v-container>
@@ -316,7 +296,7 @@ check(color)
   align-items: center;
   justify-content: center;
 .select_options
-  padding: 25px 25px 25px 0;
+  // padding: 25px 25px 25px 0;
   margin: 10px 0;
   background-color: white !important;
 .select_options
@@ -324,12 +304,13 @@ check(color)
     check(white)
     background-color: #994CC0 !important;
 .v-input--selection-controls
-  margin-top: 0;
+  // margin-top: 0;
   padding-top: 0;
 .v-input__control
-  height: 0;
+  // height: 0;
 .active
   .v-input__control
+    display: contents;
     .v-input__slot
       .theme--dark.v-label
         color: white !important
@@ -338,6 +319,7 @@ check(color)
 .select_options
   .v-input
     .v-input__control
+      display: contents;
       .v-input__slot
         .theme--dark.v-label
           check(black)
@@ -347,9 +329,42 @@ check(color)
   padding-left: 25px
 }
 .v-input--selection-controls.v-input .v-label {
-  height: 50px
-  width: 370px
-  padding-left 25px
+  height: 54px
+  width: 343px
+  // padding-left 25px
 }
-
+.v-input--selection-controls:not(.v-input--hide-details) .v-input__slot {
+  margin-bottom: 0
+}
+.bounce-transition {
+  display: inline-block; /* otherwise scale animation won't work */
+}
+.bounce-enter {
+  animation: bounce-in .5s;
+}
+.bounce-leave {
+  animation: bounce-out .5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 </style>

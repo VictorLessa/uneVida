@@ -10,11 +10,11 @@
             Contato
 
       </v-toolbar>
-    <v-container fluid class="nav">
+    <!-- <v-container fluid class="nav">
       <v-container>
-        <!-- <img src="/static/logo_unevida.svg" alt="autoconhecimento"> -->
+      <img src="/static/logo_unevida.svg" alt="autoconhecimento">
       </v-container>
-    </v-container>
+    </v-container> -->
     <Home/>
     <!-- <router-view/> -->
   </div>
