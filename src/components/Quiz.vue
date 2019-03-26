@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container v-if="show">
     <v-layout align-start justify-start column>
       <h3>Quiz: Qual o meu nível de consciência?</h3>
       <v-layout>
@@ -212,11 +212,16 @@
       </v-card>
     </v-layout>
   </v-container>
+  <getEmail v-else></getEmail>
 </template>
 
 <script>
+import getEmail from './getEmail'
 export default {
   name: 'Quizz',
+  components: {
+    getEmail
+  },
   data () {
     return {
       count: 1,
@@ -250,14 +255,12 @@ export default {
       isActive3: false,
       isActive4: false,
       isActive5: false,
-      check: false ,
       check1: false,
       check2: false,
       check3: false,
       check4: false,
       check5: false,
-
-      
+      show: false   
     }
   },
   watch: {
@@ -267,14 +270,25 @@ export default {
       this.selected.push(value)
       setTimeout(
         () => {
-          this.count++
-          this.check1 = false
-          this.check2 = false
-          this.check3 = false
-          this.check4 = false
-          this.check5 = false
-      }, 500)
-      console.log('vdf')
+          if (this.count < 10) {
+            this.count++
+            this.check1 = false
+            this.check2 = false
+            this.check3 = false
+            this.check1 = false
+            this.check4 = false
+            this.check5 = false
+          } else {
+            this.calc()
+          }
+      }, 300)
+    },
+    calc () {
+      let result = 0
+      for (let i = 0; i < this.selected.length; i++) {
+        result += this.selected[i]
+      }
+      this.show = false
     }
   }
 }
