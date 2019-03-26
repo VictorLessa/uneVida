@@ -43,6 +43,9 @@ export default {
     return {
 
     }
+  },
+  props: {
+    result: ''
   }
 }
 </script>

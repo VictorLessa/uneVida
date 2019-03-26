@@ -246,6 +246,10 @@ input[type=button] {
   }
 }
 
+.botton
+  &:focus
+    outline none
+
 @media (max-width: 560px)
   .card
     width: 100%;

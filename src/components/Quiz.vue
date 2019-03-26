@@ -212,7 +212,7 @@
       </v-card>
     </v-layout>
   </v-container>
-  <getEmail v-else></getEmail>
+  <getEmail v-else :result="result"></getEmail>
 </template>
 
 <script>
