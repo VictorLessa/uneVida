@@ -21,6 +21,7 @@
           href="https://twitter.com/intent/tweet?text=Hello%20world"
           data-size="large">
         Tweet</a>
+        <a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>
       </v-layout>
       <v-progress-linear
         color="purplee"
@@ -37,7 +38,7 @@
           <v-card-title
             class="headline font-weight-bold"
           >
-            <span style="color: black">{{ questions[count - 1] }}</span>
+            <span style="color: black; text-align: left">{{ questions[count - 1] }}</span>
           </v-card-title>
             <div v-if="count === 1" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
@@ -229,15 +230,15 @@ export default {
       selected: [],
       questions: [
         '1. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?',
-        '2. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?',
-        '3. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?',
-        '4. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?',
-        '5. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?',
-        '6. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?',
-        '7. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?',
-        '8. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?',
-        '9. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?',
-        '10. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?'
+        '2. Você sente que "mata uma leão por dia"? Que vive e trabalha apenas para sustentar você e/ou sua familia no futuro?',
+        '3. Você acredita que a felicidade se resume ao bem-estar físico e ao prazer sexual?',
+        '4. Você busca incansavelmente por reconhecimento, prestígio, ascenção social e/ou poder?',
+        '5. Você se pergunta frequentemente questões do tipo "Quem sou eu?", "Qual o meu propósito?" Etc.?',
+        '6. Você procura conhecimento de diversas religiões e dogmas para investigar a espiritualidade?',
+        '7. Você sente que já tem conhecimento espiritual mas ainda está confuso?',
+        '8. Você tem convicção de que a vida é espiritual, mas às vezes tem dúvidas?',
+        '9. Você está comprometido com a sua espiritualidade e sente que ela é mais importante que assuntos mundanos, como trabalho, prazer ou fortuna?',
+        '10. Você sente que se reintegrou ao Infinito Ser Divino, tendo chegado ao mesmo estado de Buda e de Cristo?'
       ],
       values: [
         {value1: 4, value2: 3, value3: 0, value4: 2, value5: 1},
@@ -261,7 +262,7 @@ export default {
       check3: false,
       check4: false,
       check5: false,
-      show: true   
+      show: true
     }
   },
   watch: {
