@@ -217,6 +217,7 @@
 </template>
 
 <script>
+const JsonQuiz = require('../quiz/quiz.json')
 import getEmail from './getEmail'
 export default {
   name: 'Quizz',
@@ -228,30 +229,8 @@ export default {
       count: 1,
       result: '',
       selected: [],
-      questions: [
-        '1. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?',
-        '2. Você sente que "mata uma leão por dia"? Que vive e trabalha apenas para sustentar você e/ou sua familia no futuro?',
-        '3. Você acredita que a felicidade se resume ao bem-estar físico e ao prazer sexual?',
-        '4. Você busca incansavelmente por reconhecimento, prestígio, ascenção social e/ou poder?',
-        '5. Você se pergunta frequentemente questões do tipo "Quem sou eu?", "Qual o meu propósito?" Etc.?',
-        '6. Você procura conhecimento de diversas religiões e dogmas para investigar a espiritualidade?',
-        '7. Você sente que já tem conhecimento espiritual mas ainda está confuso?',
-        '8. Você tem convicção de que a vida é espiritual, mas às vezes tem dúvidas?',
-        '9. Você está comprometido com a sua espiritualidade e sente que ela é mais importante que assuntos mundanos, como trabalho, prazer ou fortuna?',
-        '10. Você sente que se reintegrou ao Infinito Ser Divino, tendo chegado ao mesmo estado de Buda e de Cristo?'
-      ],
-      values: [
-        {value1: 4, value2: 3, value3: 0, value4: 2, value5: 1},
-        {value1: 4, value2: 3, value3: 0, value4: 2, value5: 1},
-        {value1: 4, value2: 3, value3: 0, value4: 2, value5: 1},
-        {value1: 4, value2: 3, value3: 0, value4: 2, value5: 1},
-        {value1: 4, value2: 3, value3: 0, value4: 2, value5: 1},
-        {value1: 4, value2: 3, value3: 0, value4: 2, value5: 1},
-        {value1: 4, value2: 3, value3: 0, value4: 2, value5: 1},
-        {value1: 4, value2: 3, value3: 0, value4: 2, value5: 1},
-        {value1: 4, value2: 3, value3: 0, value4: 2, value5: 1},
-        {value1: 4, value2: 3, value3: 0, value4: 2, value5: 1}
-      ],
+      questions: JsonQuiz.questions,
+      values: JsonQuiz.values,
       isActive1: false,
       isActive2: false,
       isActive3: false,

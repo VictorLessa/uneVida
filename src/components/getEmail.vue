@@ -1,5 +1,5 @@
 <template>
-  <v-container text-xs-center>
+  <v-container grid-list-md text-xs-center>
     <v-layout row wrap>
       <v-card
         dark
@@ -7,30 +7,32 @@
         style="width: 100%; padding: 20px;"
       >
         <h4 style="color: black">Seu resultado é</h4>
-        <h3 style="color: blue">{{ result }}</h3>
-        <p style="color: black">Neste nível, mesmo as necessidades de </p>
-        <h4 style="color: black">Gostaria de saber como continuar expandindo sua consciência e saber mais sobre?</h4>
-        <p style="color: black">Cadastre seu e-mail para receber um material exclusivo sobre seu nível e</p>
-        <v-layout justify-center>
-          <v-flex lg7>
-            <v-text-field
-              label="E-mail"
-              box
-              background-color="white"
-              single-line
-            ></v-text-field>
-          </v-flex>
-          <v-flex lg1>
-            <v-btn
-              color="purple"
-              big
-              dark
-              style="text-transform: capitalize; font-family: Montserrat, sans-serif; font-weight: 600"
-            >
-              Enviar
-            </v-btn>
-          </v-flex>
-        </v-layout>
+        <h3 style="color: blue; margin: 10px 0; font-size: 20px">{{ result }}</h3>
+        <p style="color: black; margin: 20px 0; width: auto">Neste nível, mesmo que as necessidades de obter sensações vão<br>sendo satisfeitas, ainda assim você não se sente completamente feliz, <br> começando então a se esforçar compulsivamente para satisfazer o<br> objetivo imprescindível de felicidade.</p>
+        <h4 style="color: black; margin: 20px 0; width: auto">Gostaria de saber como continuar expandindo sua consciência e saber mais sobre?</h4>
+        <p style="color: black; margin: 20px 0; width: auto">Cadastre seu e-mail para receber um material exclusivo sobre seu nível e matérias inéditas <br> do blog da UneVida sobre espiritualidade e outros assuntos.</p>
+        <v-container grid-list-md text-xs-center>
+          <v-layout row wrap align-center>
+            <v-flex xs12 lg7>
+              <v-text-field
+                label="E-mail"
+                box
+                background-color="white"
+                single-line
+              ></v-text-field>
+            </v-flex>
+            <v-flex xs12 lg1>
+              <v-btn
+                color="purple"
+                big
+                dark
+                style="text-transform: capitalize; font-family: Montserrat, sans-serif; font-weight: 600"
+              >
+                Enviar
+              </v-btn>
+            </v-flex>
+          </v-layout>
+        </v-container>
       </v-card>
     </v-layout>
   </v-container>

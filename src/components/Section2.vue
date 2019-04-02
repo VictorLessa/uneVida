@@ -83,7 +83,7 @@
           <p class="videoNome">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
         </v-flex>
         <v-flex lg6 xs12>
-          <span class="citacao">"Cada ser humano é<br> uma semente da vida,<br> que busca florescer,<br> frutificar."</span><br><br><p class="author">Tom Vilhena</p>
+          <p class="citacao">"Cada ser humano é<br> uma semente da vida,<br> que busca florescer,<br> frutificar."</p><br><p class="author">Tom Vilhena</p>
         </v-flex>
       </v-layout>
     </v-container>
@@ -193,8 +193,9 @@ p
 
 .citacao
   font-family 'Montserrat', sans-serif
-  color "#313131"
+  color #313131
   font-size 2rem
+  text-align: center
   font-weight 700
 
 .author
@@ -282,7 +283,7 @@ p
   .section_2_1
     padding 0px 10px
   h2
-    margin-bottom 40px
+    margin 50px 0 40px 0 i
   .playYoutube
     width: 100%;
     height: 185px;
@@ -301,8 +302,8 @@ p
     height: 405px;
     background: black;
     border-radius: 5px;
-
-
+  .citacao
+    margin-top: 20px
 @media (min-width: 560.1px) and (max-width: 768px)
   .playYoutube
     width: 100%;
@@ -312,4 +313,6 @@ p
     margin: 0 auto;
   p
     width 100%
+  .citacao
+    margin-top: 20px
 </style>

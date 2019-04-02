@@ -85,121 +85,7 @@ export default {
       show: true,
       index: 0,
       result: [null, null, null, null, null, null, null, null, null, null],
-      radioGroup: 0,
-      response: [
-        [
-          { text: "Discordo totalmente", value: 4 },
-          { text: "Discordo em partes", value: 3 },
-          { text: "Indiferente", value: 0 },
-          { text: "Concordo em partes", value: 2 },
-          { text: "Concordo totalmente", value: 1 }
-        ],
-        [
-          { text: "Discordo totalmente", value: 4 },
-          { text: "Discordo em partes", value: 3 },
-          { text: "Indiferente", value: 0 },
-          { text: "Concordo em partes", value: 2 },
-          { text: "Concordo totalmente", value: 1 }
-        ],
-        [
-          { text: "Discordo totalmente", value: 4 },
-          { text: "Discordo em partes", value: 3 },
-          { text: "Indiferente", value: 0 },
-          { text: "Concordo em partes", value: 2 },
-          { text: "Concordo totalmente", value: 1 }
-        ],
-        [
-          { text: "Discordo totalmente", value: 4 },
-          { text: "Discordo em partes", value: 3 },
-          { text: "Indiferente", value: 0 },
-          { text: "Concordo em partes", value: 2 },
-          { text: "Concordo totalmente", value: 1 }
-        ],
-        [
-          { text: "Discordo totalmente", value: 1 },
-          { text: "Discordo em partes", value: 2 },
-          { text: "Indiferente", value: 0 },
-          { text: "Concordo em partes", value: 3 },
-          { text: "Concordo totalmente", value: 4 }
-        ],
-        [
-          { text: "Discordo totalmente", value: 1 },
-          { text: "Discordo em partes", value: 2 },
-          { text: "Indiferente", value: 0 },
-          { text: "Concordo em partes", value: 3 },
-          { text: "Concordo totalmente", value: 4 }
-        ],
-        [
-          { text: "Discordo totalmente", value: 4 },
-          { text: "Discordo em partes", value: 3 },
-          { text: "Indiferente", value: 0 },
-          { text: "Concordo em partes", value: 2 },
-          { text: "Concordo totalmente", value: 1 }
-        ],
-        [
-          { text: "Discordo totalmente", value: 4 },
-          { text: "Discordo em partes", value: 3 },
-          { text: "Indiferente", value: 0 },
-          { text: "Concordo em partes", value: 2 },
-          { text: "Concordo totalmente", value: 1 }
-        ],
-        [
-          { text: "Discordo totalmente", value: 1 },
-          { text: "Discordo em partes", value: 2 },
-          { text: "Indiferente", value: 0 },
-          { text: "Concordo em partes", value: 3 },
-          { text: "Concordo totalmente", value: 4 }
-        ],
-        [
-          { text: "Discordo totalmente", value: 1 },
-          { text: "Discordo em partes", value: 2 },
-          { text: "Indiferente", value: 0 },
-          { text: "Concordo em partes", value: 3 },
-          { text: "Concordo totalmente", value: 4 }
-        ]
-      ],
-      questions: [
-        {
-          text:
-            "1. Você sente que está em uma luta constante para satisfazer suas necessidades básicas?"
-        },
-        {
-          text:
-            '2. Você sente que "mata um leão por dia"? Que vive e trabalha apenas para sustentar você e/ou sua familia no futuro?'
-        },
-        {
-          text:
-            "3. Você acredita que a felicidade se resume ao bem-estar físico e ao prazer sexual?"
-        },
-        {
-          text:
-            "4. Você busca incansavelmente por reconhecimento, prestígio, ascenção social e/ou poder?"
-        },
-        {
-          text:
-            '5. Você se pergunta frequentemente questões do tipo "Quem sou eu?", "Qual o meu propósito?" etc.?'
-        },
-        {
-          text:
-            "6. Você procura conhecimentos de diversas religiões e dogmas para investigar a espiritualidade?"
-        },
-        {
-          text:
-            "7. Você sente que já tem conhecimento espiritual consideravel, mas ainda está confuso?"
-        },
-        {
-          text:
-            "8. Você tem convicção de que a vida é espiritual, mas às vezes tem crises de dúvidas?"
-        },
-        {
-          text:
-            "9. Você está comprometido com a sua espiritualidade e sente que ela é mais importante que assuntos mundanos, como trabalho, prazer ou fortuna?"
-        },
-        {
-          text:
-            "10. Você sente que se reintegrou ao Infinito Ser Divino, tenho chegado ao mesmo estado de Buda e de Cristo?"
-        }
-      ]
+      radioGroup: 0
     };
   }
 };
@@ -258,7 +144,8 @@ input[type=button] {
     padding 40px 0
 
   h2
-    margin 0 10px
+    margin-left: 10px
+    margin-right: 10
 
   input[type=button]
     color: white;
