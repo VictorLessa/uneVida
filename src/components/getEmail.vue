@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-card
         dark
-        color="#F9FAFC"
+        color="#F9FAF6"
         style="width: 100%; padding: 20px;"
       >
         <h4 style="color: black">Seu resultado é</h4>
@@ -13,24 +13,32 @@
         <p style="color: black; margin: 20px 0; width: auto">Cadastre seu e-mail para receber um material exclusivo sobre seu nível e matérias inéditas <br> do blog da UneVida sobre espiritualidade e outros assuntos.</p>
         <v-container grid-list-md text-xs-center>
           <v-layout row wrap align-center>
-            <v-flex xs12 lg7>
+            <v-form
+              ref="form"
+              v-model="valid"
+              lazy-validation
+              class="form"
+            >
               <v-text-field
-                label="E-mail"
-                box
-                background-color="white"
-                single-line
+                ref="email"
+                v-model="email"
+                :rules="[
+                  () => !!email || 'E-mail é necessario!',
+                  () => /.+@.+/.test(email) || 'Valor não é um e-mail!' 
+                  ]"
+                :error-messages="errorMessages"
+                label="E-email"
+                solo
+                color="black"
+                required
               ></v-text-field>
-            </v-flex>
-            <v-flex xs12 lg1>
               <v-btn
-                color="purple"
-                big
-                dark
-                style="text-transform: capitalize; font-family: Montserrat, sans-serif; font-weight: 600"
+                color="success"
+                @click="submit"
               >
-                Enviar
+                Validate
               </v-btn>
-            </v-flex>
+            </v-form>
           </v-layout>
         </v-container>
       </v-card>
@@ -43,7 +51,40 @@ export default {
   name: "Result",
   data () {
     return {
+      valid: true,
+      email: null,
+      errorMessages: '',
+      rules: {
+        required: value => !!value || 'Required.',
+        counter: value => value.length <= 20 || 'Max 20 characters',
+        email: value => {
+          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          return pattern.test(value) || 'Invalid e-mail.'
+        }
+      }
+    }
+  },
+  computed: {
+    form () {
+      return {
+        email: this.email
+      }
+    }
+  },
+  watch: {
+    name () {
+      this.errorMessages = ''
+    }
+  },
+  methods: {
+    submit () {
+      this.formHasErrors = false
 
+      Object.keys(this.form).forEach(f => {
+        if (!this.form[f]) this.formHasErrors = true
+
+        this.$refs[f].validate(true)
+      })
     }
   },
   props: {
@@ -54,12 +95,23 @@ export default {
 
 <style lang="stylus">
 i = !important
-.theme--dark.v-input:not(.v-input--is-disabled) input, .theme--dark.v-input:not(.v-input--is-disabled) textarea
-  color: black i
+.theme--dark.v-messages
+  color: red
 .theme--dark.v-label
-  color black i
-.theme--dark.v-btn:not(.v-btn--icon):not(.v-btn--flat)
-  height 56px
-  width: 200px
-  margin 0 0 0 10px
+  color: black
+.theme--dark.v-text-field--solo > .v-input__control > .v-input__slot
+  background white
+.form
+  width 500px
+  display flex
+  margin 0 auto
+  justify-content center
+// .theme--dark.v-input:not(.v-input--is-disabled) input, .theme--dark.v-input:not(.v-input--is-disabled) textarea
+//   color: black i
+// .theme--dark.v-label
+//   color black i
+// .theme--dark.v-btn:not(.v-btn--icon):not(.v-btn--flat)
+//   height 56px
+//   width: 200px
+//   margin 0 0 0 10px
 </style>

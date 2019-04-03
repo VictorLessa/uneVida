@@ -38,7 +38,7 @@
           <v-card-title
             class="headline font-weight-bold"
           >
-            <span style="color: black; text-align: left">{{ questions[count - 1] }}</span>
+            <span style="color: black; text-align: left; height: 40px">{{ questions[count - 1] }}</span>
           </v-card-title>
             <div v-if="count === 1" transition="bounce">
               <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
@@ -241,7 +241,7 @@ export default {
       check3: false,
       check4: false,
       check5: false,
-      show: true
+      show: false
     }
   },
   watch: {
