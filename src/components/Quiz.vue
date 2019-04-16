@@ -241,8 +241,10 @@ export default {
       check3: false,
       check4: false,
       check5: false,
-      show: false
     }
+  },
+  props: {
+    show: null
   },
   watch: {
   },

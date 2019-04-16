@@ -1,14 +1,14 @@
 <template>
 <div>
   <h2>Faça o teste e confira qual o seu momento atual</h2>
-  <v-container  v-show="show === true" class="section_quiz">
+  <v-container  v-show="show" class="section_quiz">
     <v-layout fill-height align-center justify-center>
       <!-- <input type="image" src="/static/consciencia.png" name="Iniciar" value="Inicia quiz"/> -->
       <input class="botton" @click="show = false" type="button" value="Iniciar Quiz">
       <!-- <v-btn class="button" @click="startQuiz">Inicia quiz</v-btn> -->
     </v-layout>
   </v-container>
-  <Quiz v-show="show === false"></Quiz>
+  <Quiz v-show="!show" :show="!show"></Quiz>
 </div>
 </template>
 
