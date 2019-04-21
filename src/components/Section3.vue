@@ -8,7 +8,33 @@
       <!-- <v-btn class="button" @click="startQuiz">Inicia quiz</v-btn> -->
     </v-layout>
   </v-container>
-  <Quiz v-show="!show" :show="!show"></Quiz>
+  <v-container v-if="!show">
+    <v-layout align-start justify-start column>
+    <h3>Quiz: Qual o meu nível de consciência?</h3>
+      <v-layout>
+        <div
+          class="fb-share-button"
+          data-href="https://www.youtube.com/"
+          data-layout="button"
+          data-size="large"
+          style="margin-right: 10px"
+          data-mobile-iframe="true"
+        >
+          <a
+            target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+            class="fb-xfbml-parse-ignore"
+          >Compartilhar</a>
+        </div>
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=Hello%20world"
+          data-size="large">
+        Tweet</a>
+        <a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>
+      </v-layout>
+    <Quiz :show="!show"></Quiz>
+    </v-layout>
+  </v-container>
 </div>
 </template>
 
@@ -27,6 +53,9 @@ export default {
     Quiz
   },
   methods: {
+    res (e) {
+      this.show = e
+    },
     startQuiz() {
       this.quiz = 1;
     },

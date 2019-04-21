@@ -1,6 +1,6 @@
 <template>
-  <v-container v-if="show">
-    <v-layout align-start justify-start column>
+<div v-if="show" style="width: 100%">
+    <!-- <v-layout align-start justify-start column>
       <h3>Quiz: Qual o meu nível de consciência?</h3>
       <v-layout>
         <div
@@ -22,13 +22,13 @@
           data-size="large">
         Tweet</a>
         <a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>
-      </v-layout>
+      </v-layout> -->
       <v-progress-linear
         color="purplee"
         height="25"
         :value="count * 10"
       > {{ count }} de 10 </v-progress-linear>
-    </v-layout>
+    <!-- </v-layout> -->
     <v-layout>
       <v-card
         dark
@@ -212,8 +212,10 @@
             </div>
       </v-card>
     </v-layout>
-  </v-container>
-  <getEmail v-else :result="result"></getEmail>
+</div>
+<div v-else>
+<getEmail :result="result"></getEmail>
+</div>
 </template>
 
 <script>
@@ -302,6 +304,7 @@ export default {
         this.result = 'iluminação'
         // alert("iluminação");
       }
+      this.$emit('res', true)
       this.show = false
     }
   }
