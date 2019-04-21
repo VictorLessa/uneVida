@@ -6,7 +6,9 @@ import App from "./App";
 import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
 import VeeValidate from 'vee-validate'
-
+import Vue2TouchEvents from 'vue2-touch-events'
+ 
+Vue.use(Vue2TouchEvents)
 Vue.use(VeeValidate)
 Vue.use(Vuetify);
 Vue.config.productionTip = false;

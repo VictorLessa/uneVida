@@ -1,28 +1,5 @@
 <template>
-<div v-if="show" style="width: 100%">
-    <!-- <v-layout align-start justify-start column>
-      <h3>Quiz: Qual o meu nível de consciência?</h3>
-      <v-layout>
-        <div
-          class="fb-share-button"
-          data-href="https://www.youtube.com/"
-          data-layout="button"
-          data-size="large"
-          style="margin-right: 10px"
-          data-mobile-iframe="true"
-        >
-          <a
-            target="_blank"
-            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
-            class="fb-xfbml-parse-ignore"
-          >Compartilhar</a>
-        </div>
-        <a class="twitter-share-button"
-          href="https://twitter.com/intent/tweet?text=Hello%20world"
-          data-size="large">
-        Tweet</a>
-        <a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>
-      </v-layout> -->
+<div v-if="flag" style="width: 100%">
       <v-progress-linear
         color="purplee"
         height="25"
@@ -38,182 +15,182 @@
           <v-card-title
             class="headline font-weight-bold"
           >
-            <span style="color: black; text-align: left; height: 40px">{{ questions[count - 1] }}</span>
+            <span class="question">{{ questions[count - 1] }}</span>
           </v-card-title>
             <div v-if="count === 1" transition="bounce">
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive1 = false" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
                 <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
                 <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
                 <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 2" transition="bounce">
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive1 = false" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
                 <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
                 <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
                 <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 3" transition="bounce">
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive1 = false" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
                 <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
                 <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
                 <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 4" transition="bounce">
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive1 = false" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
                 <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
                 <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
                 <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 5" transition="bounce">
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive1 = false" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
                 <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
                 <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
                 <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 6" transition="bounce">
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive1 = false" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
                 <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
                 <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
                 <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 7" transition="bounce">
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive1 = false" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
                 <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
                 <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
                 <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 8" transition="bounce">
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive1 = false" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
                 <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
                 <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
                 <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 9" transition="bounce">
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive1 = false" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
                 <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
                 <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
                 <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 10" transition="bounce">
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive1 = false" v-on:mouseover="isActive1 = true" v-on:mouseleave="isActive1 = false">
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
                 <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
                 <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
                 <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
-              <v-card max-width="400px" class="select_options" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
+              <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
                 <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
       </v-card>
     </v-layout>
 </div>
-<div v-else>
+<div style="width: 100%; padding: 10px" v-else>
 <getEmail :result="result"></getEmail>
 </div>
 </template>
@@ -229,6 +206,7 @@ export default {
   data () {
     return {
       count: 1,
+      flag: this.show,
       result: '',
       selected: [],
       questions: JsonQuiz.questions,
@@ -304,8 +282,8 @@ export default {
         this.result = 'iluminação'
         // alert("iluminação");
       }
-      this.$emit('res', true)
-      this.show = false
+      // this.$emit('res', true)
+      this.flag = false
     }
   }
 }
@@ -376,6 +354,21 @@ check(color)
 .bounce-leave {
   animation: bounce-out .5s;
 }
+.question
+  color: black;
+  text-align: left;
+  height: auto
+  font-size: 2rem
+  font-family: 'Montserrat', sans-serif
+
+@media (max-width: 560px)
+  .question
+    color: black;
+    text-align: left;
+    height: auto
+    font-size 1rem
+    font-family: 'Montserrat', sans-serif
+
 @keyframes bounce-in {
   0% {
     transform: scale(0);

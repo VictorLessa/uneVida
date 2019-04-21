@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="padding: 10px">
   <h2>Faça o teste e confira qual o seu momento atual</h2>
   <v-container  v-show="show" class="section_quiz">
     <v-layout fill-height align-center justify-center>
@@ -12,25 +12,18 @@
     <v-layout align-start justify-start column>
     <h3>Quiz: Qual o meu nível de consciência?</h3>
       <v-layout>
-        <div
-          class="fb-share-button"
-          data-href="https://www.youtube.com/"
-          data-layout="button"
-          data-size="large"
-          style="margin-right: 10px"
-          data-mobile-iframe="true"
-        >
-          <a
-            target="_blank"
-            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
-            class="fb-xfbml-parse-ignore"
-          >Compartilhar</a>
-        </div>
-        <a class="twitter-share-button"
-          href="https://twitter.com/intent/tweet?text=Hello%20world"
-          data-size="large">
-        Tweet</a>
-        <a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>
+        <vue-goodshare-facebook
+          page_url="https://github.com"
+          title_social="Facebook"
+        ></vue-goodshare-facebook>
+        <vue-goodshare-twitter
+          page_url="https://github.com"
+          title_social="Twitter"
+        ></vue-goodshare-twitter>
+        <vue-goodshare-whatsapp
+          page_url="https://github.com"
+          title_social="Whatsapp"
+        ></vue-goodshare-whatsapp>
       </v-layout>
     <Quiz :show="!show"></Quiz>
     </v-layout>
@@ -39,6 +32,9 @@
 </template>
 
 <script>
+import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
+import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
+import VueGoodshareWhatsapp from "vue-goodshare/src/providers/Whatsapp.vue";
 import Quiz from './Quiz'
 import getEmail from "./getEmail";
 export default {
@@ -50,12 +46,12 @@ export default {
   },
   components: {
     getEmail,
-    Quiz
+    Quiz,
+    VueGoodshareFacebook,
+    VueGoodshareTwitter,
+    VueGoodshareWhatsapp
   },
   methods: {
-    res (e) {
-      this.show = e
-    },
     startQuiz() {
       this.quiz = 1;
     },

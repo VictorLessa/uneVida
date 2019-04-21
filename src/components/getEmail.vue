@@ -1,49 +1,54 @@
 <template>
-  <v-container grid-list-md text-xs-center>
-    <v-layout row wrap>
+  <!-- <v-container grid-list-md text-xs-center>
+    <v-layout row wrap> -->
       <v-card
         dark
         color="#F9FAF6"
-        style="width: 100%; padding: 20px;"
+        class="cardGetEmail"
       >
         <h4 style="color: black">Seu resultado é</h4>
         <h3 style="color: blue; margin: 10px 0; font-size: 20px">{{ result }}</h3>
         <p style="color: black; margin: 20px 0; width: auto">Neste nível, mesmo que as necessidades de obter sensações vão<br>sendo satisfeitas, ainda assim você não se sente completamente feliz, <br> começando então a se esforçar compulsivamente para satisfazer o<br> objetivo imprescindível de felicidade.</p>
         <h4 style="color: black; margin: 20px 0; width: auto">Gostaria de saber como continuar expandindo sua consciência e saber mais sobre?</h4>
         <p style="color: black; margin: 20px 0; width: auto">Cadastre seu e-mail para receber um material exclusivo sobre seu nível e matérias inéditas <br> do blog da UneVida sobre espiritualidade e outros assuntos.</p>
+          <v-form
+            ref="form"
+            v-model="valid"
+            lazy-validation
+            class="form"
+          >
         <v-container grid-list-md text-xs-center>
-          <v-layout row wrap align-center>
-            <v-form
-              ref="form"
-              v-model="valid"
-              lazy-validation
-              class="form"
-            >
-              <v-text-field
-                ref="email"
-                v-model="email"
-                :rules="[
-                  () => !!email || 'E-mail é necessario!',
-                  () => /.+@.+/.test(email) || 'Valor não é um e-mail!' 
-                  ]"
-                :error-messages="errorMessages"
-                label="E-email"
-                solo
-                color="black"
-                required
-              ></v-text-field>
-              <v-btn
-                color="success"
-                @click="submit"
-              >
-                Validate
-              </v-btn>
-            </v-form>
-          </v-layout>
+            <v-layout row wrap align-start>
+                <v-flex md12 lg10>
+                  <v-text-field
+                    ref="email"
+                    v-model="email"
+                    :rules="[
+                      () => !!email || 'E-mail é necessario!',
+                      () => /.+@.+/.test(email) || 'Valor não é um e-mail!' 
+                      ]"
+                    :error-messages="errorMessages"
+                    label="E-email"
+                    solo
+                    color="black"
+                    required
+                  ></v-text-field>
+                </v-flex>
+                <v-flex md12 lg2>
+                  <v-btn
+                    class="btn-send"
+                    color="success"
+                    @click="submit"
+                  >
+                    Enviar
+                  </v-btn>
+                </v-flex>
+            </v-layout>
         </v-container>
+          </v-form>
       </v-card>
-    </v-layout>
-  </v-container>
+    <!-- </v-layout>
+  </v-container> -->
 </template>
 
 <script>
@@ -100,7 +105,7 @@ i = !important
 .theme--dark.v-label
   color: black
 .theme--dark.v-text-field--solo > .v-input__control > .v-input__slot
-  background white
+  background white i
 .theme--dark.v-input:not(.v-input--is-disabled) input
   color black i
 .form
@@ -116,4 +121,17 @@ i = !important
 //   height 56px
 //   width: 200px
 //   margin 0 0 0 10px
+.cardGetEmail
+  width: 100%;
+  padding: 20px;
+
+@media (max-width 500px)
+  .form
+    width 100%
+  .cardGetEmail
+    width: 100%;
+    padding: 10px;
+  .btn-send
+    width 95%
+
 </style>
