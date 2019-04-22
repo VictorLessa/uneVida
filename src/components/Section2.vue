@@ -1,8 +1,9 @@
 <template>
   <div>
     <v-container class="section_2" id="section2">
-      <v-layout justify-center>
+      <v-layout justify-center column>
         <h2>Em que nível de consciencia você está?</h2>
+        <p style="margin-bottom: 50px">Seu nível de consciência determina seu grau de felicidade!</p>
       </v-layout>
       <v-layout wrap row style="justify-content: center">
         <v-flex>
@@ -80,7 +81,7 @@
     <v-container grid-list-md text-xs-center class="section_2_1">
       <v-layout row wrap align-center>
         <v-flex lg6 xs12>
-          <p class="videoNome">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+          <p class="videoNome">Olhamos em volta e tendemos a almejar o lugar daquelas pessoas que alcançaram o que o mundo chama de “sucesso”. Queremos o sucesso, mas não a estrada que precisa ser percorrida até o podium. E nem nos damos conta que o grau de sucesso ou de felicidade que uma pessoa alcança está diretamente relacionado ao seu nível de consciência. A vida que você tem hoje é determinada pelo nível de consciência que você porta. Em que nível de consciência você está? A consciência pode ser aprimorada através do autoconhecimento e da autotransformação. E esta é, certamente, a mais bela e valiosa tarefa que todo ser humana pode realizar durante uma encarnação. Buscar apenas o sucessos material é ingênuo, pois que tudo que foi gerado na matéria findará no tempo. Mas o que foi forjado no Espírito, nos acompanhará por toda eternidade, durante toda Jornada de nossas Almas.</p>
         </v-flex>
         <v-flex lg6 xs12>
           <p class="citacao">"Cada ser humano é<br> uma semente da vida,<br> que busca florescer,<br> frutificar."</p><br><p class="author">Tom Vilhena</p>
@@ -183,7 +184,6 @@ h2
   font-family 'Montserrat', sans-serif
   font-size 2rem
   font-weight 700
-  margin-bottom 60px
 p
   font-family 'Montserrat', sans-serif
   font-size 1rem

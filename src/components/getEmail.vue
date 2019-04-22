@@ -101,9 +101,9 @@ export default {
 <style lang="stylus">
 i = !important
 .theme--dark.v-messages
-  color: red
+  color: red i
 .theme--dark.v-label
-  color: black
+  color: black i
 .theme--dark.v-text-field--solo > .v-input__control > .v-input__slot
   background white i
 .theme--dark.v-input:not(.v-input--is-disabled) input
