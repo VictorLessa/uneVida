@@ -28,7 +28,7 @@
                       () => /.+@.+/.test(email) || 'Valor não é um e-mail!' 
                       ]"
                     :error-messages="errorMessages"
-                    label="E-email"
+                    label="E-mail"
                     solo
                     color="black"
                     required
@@ -37,10 +37,12 @@
                 <v-flex md12 lg2>
                   <v-btn
                     class="btn-send"
-                    color="success"
+                    color="#7A3ACC"
+                    style="heigth: 48px; text-transform: capitalize"
+                    :loading="loading"
                     @click="submit"
                   >
-                    Enviar
+                    {{ text_botao }}
                   </v-btn>
                 </v-flex>
             </v-layout>
@@ -57,7 +59,9 @@ export default {
   data () {
     return {
       valid: true,
+      loading: false,
       email: null,
+      text_botao: 'Enviar',
       errorMessages: '',
       rules: {
         required: value => !!value || 'Required.',
@@ -82,13 +86,23 @@ export default {
     }
   },
   methods: {
+    sendEmail () {
+      console.log('teste')
+    },
     submit () {
+      this.loading = true
+      this.text_botao = 'Enviado'
+      
       this.formHasErrors = false
 
       Object.keys(this.form).forEach(f => {
         if (!this.form[f]) this.formHasErrors = true
-
+        if (!this.formHasErrors) {
+          this.loading = false
+          this.text_botao = 'Enviado'
+        }
         this.$refs[f].validate(true)
+        
       })
     }
   },
