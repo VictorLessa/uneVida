@@ -22,16 +22,16 @@
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
-                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo em partes" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
-                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Indiferente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
-                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Concordo em partes" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
-                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Concordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 2" transition="bounce">
@@ -39,16 +39,16 @@
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
-                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo em partes" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
-                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Indiferente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
-                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Concordo em partes" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
-                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Concordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 3" transition="bounce">
@@ -56,16 +56,16 @@
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
-                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo em partes" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
-                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Indiferente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
-                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Concordo em partes" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
-                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Concordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 4" transition="bounce">
@@ -73,16 +73,16 @@
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
-                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo em partes" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
-                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Indiferente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
-                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Concordo em partes" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
-                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Concordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 5" transition="bounce">
@@ -90,16 +90,16 @@
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
-                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo em partes" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
-                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Indiferente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
-                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Concordo em partes" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
-                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Concordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 6" transition="bounce">
@@ -107,16 +107,16 @@
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
-                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo em partes" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
-                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Indiferente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
-                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Concordo em partes" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
-                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Concordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 7" transition="bounce">
@@ -124,16 +124,16 @@
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
-                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo em partes" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
-                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Indiferente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
-                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Concordo em partes" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
-                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Concordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 8" transition="bounce">
@@ -141,16 +141,16 @@
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
-                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo em partes" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
-                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Indiferente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
-                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Concordo em partes" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
-                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Concordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 9" transition="bounce">
@@ -158,16 +158,16 @@
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
-                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo em partes" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
-                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Indiferente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
-                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Concordo em partes" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive5 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
-                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Concordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
             <div v-if="count === 10" transition="bounce">
@@ -175,16 +175,16 @@
                 <v-checkbox v-bind:class="{active: isActive1 }" color="green" label="Discordo totalmente" v-model="check1" @change="select(values[ count -1 ].value1)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive2 = false" v-on:mouseover="isActive2 = true" v-on:mouseleave="isActive2 = false">
-                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo totalmente" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive2 }" color="green" label="Discordo em partes" v-model="check2" @change="select(values[ count -1 ].value2)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive3 = false" v-on:mouseover="isActive3 = true" v-on:mouseleave="isActive3 = false">
-                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Discordo totalmente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive3 }" color="green" label="Indiferente" v-model="check3" @change="select(values[ count -1 ].value3)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive4 = true" v-on:mouseleave="isActive4 = false" >
-                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Discordo totalmente" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive4 }" color="green" label="Concordo em partes" v-model="check4" @change="select(values[ count -1 ].value4)"></v-checkbox>
               </v-card>
               <v-card max-width="400px" class="select_options" v-touch:end="isActive4 = false" v-on:mouseover="isActive5 = true" v-on:mouseleave="isActive5 = false">
-                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Discordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
+                <v-checkbox v-bind:class="{active: isActive5 }" color="green" label="Concordo totalmente" v-model="check5" @change="select(values[ count -1 ].value5)"></v-checkbox>
               </v-card>
             </div>
       </v-card>
@@ -290,6 +290,7 @@ export default {
 </script>
 
 <style lang="stylus">
+i = !important
 check(color)
   color: color
 .v-progress-linear__bar
@@ -365,10 +366,59 @@ check(color)
   .question
     color: black;
     text-align: left;
-    height: auto
+    height: 120px
     font-size 1rem
     font-family: 'Montserrat', sans-serif
-
+  .select_options
+    // padding: 25px 25px 25px 0;
+    margin: 10px 0 i
+    background-color: white !important;
+  .select_options
+    &:hover
+      check(white)
+      background-color: #994CC0 !important;
+  .v-input--selection-controls
+    // margin-top: 0;
+    padding-top: 0 i
+  .v-input__control
+    // height: 0;
+  .active
+    .v-input__control
+      display: contents;
+      .v-input__slot
+        .theme--dark.v-label
+          color: white !important
+        .theme--dark.v-icon
+          color: white !important;
+  .select_options
+    .v-input
+      .v-input__control
+        display: contents;
+        .v-input__slot
+          .theme--dark.v-label
+            check(black)
+  .theme--dark.v-icon
+    color: black i;
+  .v-input--selection-controls {
+    padding-left: 25px i
+  }
+  .v-input--selection-controls.v-input .v-label {
+    height: 54px i
+    width: 343px i
+    // padding-left 25px
+  }
+  .v-input--selection-controls:not(.v-input--hide-details) .v-input__slot {
+    margin-bottom: 0 i
+  }
+  .bounce-transition {
+    display: inline-block; /* otherwise scale animation won't work */
+  }
+  .bounce-enter {
+    animation: bounce-in .5s;
+  }
+  .bounce-leave {
+    animation: bounce-out .5s;
+  }
 @keyframes bounce-in {
   0% {
     transform: scale(0);
