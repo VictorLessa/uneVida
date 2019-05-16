@@ -315,7 +315,7 @@ check(color)
     background-color: #994CC0 !important;
 .v-input--selection-controls
   // margin-top: 0;
-  padding-top: 0;
+  padding-top: 0 !important;
 .v-input__control
   // height: 0;
 .active
@@ -334,17 +334,17 @@ check(color)
         .theme--dark.v-label
           check(black)
 .theme--dark.v-icon
-  color: black;
+  color: black !important;
 .v-input--selection-controls {
   padding-left: 25px
 }
 .v-input--selection-controls.v-input .v-label {
-  height: 54px
+  height: 54px i
   width: 343px
   // padding-left 25px
 }
 .v-input--selection-controls:not(.v-input--hide-details) .v-input__slot {
-  margin-bottom: 0
+  margin-bottom: 0 !important
 }
 .bounce-transition {
   display: inline-block; /* otherwise scale animation won't work */
@@ -359,7 +359,7 @@ check(color)
   color: black;
   text-align: left;
   height: auto
-  font-size: 2rem
+  font-size: 1.6rem
   font-family: 'Montserrat', sans-serif
 
 @media (max-width: 560px)

@@ -24,7 +24,7 @@
                   <div class="icon_hover" v-bind:class="{ active: isActive1 }">
                     <v-icon @click="activeThumb1" x-large color="white">play_arrow</v-icon>
                   </div>
-                  <img src="/static/momentos.jpg" alt>
+                  <img src="/static/00.jpg" alt>
                 </div>
               </div>
               <p class="VideoNome">Os 10 níveis da<br> consciência humana</p>
@@ -35,7 +35,7 @@
                   <div class="icon_hover" v-bind:class="{ active: isActive2 }">
                     <v-icon @click="activeThumb2" x-large color="white">play_arrow</v-icon>
                   </div>
-                  <img src="/static/sobrevivencia.jpg" alt>
+                  <img src="/static/01 sobrevivencia.jpg" alt>
                 </div>
               </div>
               <p class="VideoNome">O meu momento é<br> de sobrevivencia?</p>
@@ -46,7 +46,7 @@
                   <div class="icon_hover" v-bind:class="{ active: isActive3 }">
                     <v-icon  @click="activeThumb3" x-large color="white">play_arrow</v-icon>
                   </div>
-                  <img src="/static/seguranca.jpg" alt>
+                  <img src="/static/02.jpg" alt>
                 </div>
               </div>
               <p class="VideoNome">Já passei por meu<br> momento de segurança?</p>
@@ -57,7 +57,7 @@
                   <div class="icon_hover" v-bind:class="{ active: isActive4 }">
                     <v-icon @click="activeThumb4" x-large color="white">play_arrow</v-icon>
                   </div>
-                  <img src="/static/prazer.jpg" alt>
+                  <img src="/static/03.jpg" alt>
                 </div>
               </div>
               <p class="VideoNome">A busca incanssante<br> pela sensação de prazer</p>
@@ -68,10 +68,76 @@
                   <div class="icon_hover" v-bind:class="{ active: isActive5 }">
                     <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
                   </div>
-                  <img src="/static/dominio.jpg" alt>
+                  <img src="/static/04.jpg" alt>
                 </div>
               </div>
               <p class="VideoNome">Os pazeres da emoção<br> e da mente</p>
+            </Slide>
+            <Slide>
+              <div class="list_thumb" @click="activeThumb5">
+                <div class="thumb">
+                  <div class="icon_hover" v-bind:class="{ active: isActive5 }">
+                    <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
+                  </div>
+                  <img src="/static/05.jpg" alt>
+                </div>
+              </div>
+              <p class="VideoNome">Eliminar o sofrimento</p>
+            </Slide>
+            <Slide>
+              <div class="list_thumb" @click="activeThumb5">
+                <div class="thumb">
+                  <div class="icon_hover" v-bind:class="{ active: isActive5 }">
+                    <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
+                  </div>
+                  <img src="/static/06.jpg" alt>
+                </div>
+              </div>
+              <p class="VideoNome">Cruzar a escuridão</p>
+            </Slide>
+            <Slide>
+              <div class="list_thumb" @click="activeThumb5">
+                <div class="thumb">
+                  <div class="icon_hover" v-bind:class="{ active: isActive5 }">
+                    <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
+                  </div>
+                  <img src="/static/07.jpg" alt>
+                </div>
+              </div>
+              <p class="VideoNome">Busca coêrencia interna</p>
+            </Slide>
+            <Slide>
+              <div class="list_thumb" @click="activeThumb5">
+                <div class="thumb">
+                  <div class="icon_hover" v-bind:class="{ active: isActive5 }">
+                    <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
+                  </div>
+                  <img src="/static/08.jpg" alt>
+                </div>
+              </div>
+              <p class="VideoNome">Integridade e <br>autenticidade</p>
+            </Slide>
+            <Slide>
+              <div class="list_thumb" @click="activeThumb5">
+                <div class="thumb">
+                  <div class="icon_hover" v-bind:class="{ active: isActive5 }">
+                    <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
+                  </div>
+                  <img src="/static/09.jpg" alt>
+                </div>
+              </div>
+              <p class="VideoNome">Busca autorrealização</p>
+            </Slide>
+            <Slide>
+              <div class="list_thumb" @click="activeThumb5">
+                <div class="thumb">
+                  <div class="icon_hover" v-bind:class="{ active: isActive5 }">
+                    <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
+                  </div>
+                  <img src="/static/10.jpg" alt>
+                </div>
+              </div>
+              <p class="VideoNome">Expressa Deus</p>
             </Slide>
             <hooper-navigation slot="hooper-addons"></hooper-navigation>
           </Hooper>

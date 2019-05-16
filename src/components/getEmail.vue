@@ -52,6 +52,7 @@
 </template>
 
 <script>
+import classSendEmail from '@/nodeMailer/index.js'
 export default {
   name: "Result",
   data () {
@@ -101,19 +102,7 @@ export default {
       if (!this.formHasErrors) {
         this.loading = false
         this.text_botao = 'Enviado'
-        await Email.send({
-          SecureToken: '376c463-5904-4ec4-adac-7d73fa65dfe1',
-          // SecureToken : "5a30f47a-376c-451d-ac3a-a283bf370880",
-          To : 'victordsgnr@gmail.com',
-          From : "unevida.drive@gmail.com",
-          Subject : "This is the subject",
-          Body : "<p>And this is the body</p>"
-        }).then(
-          success => {
-            console.log(success)
-          }
-        ).catch(err => console.log(err))
-        // const nodeMailer = require('@/nodeMailer/index.js')
+        await classSendEmail.sendEmail().then(s => console.log(s)).catch(err => console.log(err))
       }
     }
   },
