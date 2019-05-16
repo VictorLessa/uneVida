@@ -10,7 +10,6 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "dns": "^0.2.2",
     "hooper": "0.0.9",
     "mailchimp-api-v3": "^1.13.0",
     "mandrill-api": "^1.0.45",
