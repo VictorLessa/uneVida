@@ -6,10 +6,10 @@
       </div>
       <div class="elevation">
         <h1 style="color: white">Em que direção seguir?</h1>
-        <p style="color: white">Existe um momento em que começamos a questionar o sentido de nossas vidas e com isso a busca por respostas passa a ser a grande motivação para acordarmos todos os dias. Mas encontrar respostas é apenas a consequência natural de uma série de fatores que precisamos desvendar.”</p>
+        <p style="color: white">Existe um momento em que começamos a questionar o sentido de nossas vidas e com isso a busca por respostas passa a ser a grande motivação para acordarmos todos os dias. Mas encontrar respostas é apenas a consequência natural de uma série de fatores que precisamos desvendar.</p>
       </div>
       <div class="elevation">
-        <input class="botton" @click="$vuetify.goTo('#section2', {duration: 300, offset: 0, easing: 'easeInOutCubic'})" type="button" value="Saiba mais">
+        <input class="botton" @click="$vuetify.goTo('#section2', {duration: 900, offset: 0, easing: 'easeInOutCubic'})" type="button" value="Saiba mais">
       </div>
     </v-layout>
   </v-container>
@@ -51,7 +51,7 @@ input[type=button]
   p
     width 100%
   .elevation
-    margin 30px 0px
+    margin 10px auto
   br
     display none
 @media (max-width: 768px)

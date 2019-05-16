@@ -8,9 +8,7 @@
       >
         <h4 style="color: black">Seu resultado é</h4>
         <h3 style="color: blue; margin: 10px 0; font-size: 20px">{{ result }}</h3>
-        <p style="color: black; margin: 20px 0; width: auto">Neste nível, mesmo que as necessidades de obter sensações vão<br>sendo satisfeitas, ainda assim você não se sente completamente feliz, <br> começando então a se esforçar compulsivamente para satisfazer o<br> objetivo imprescindível de felicidade.</p>
-        <h4 style="color: black; margin: 20px 0; width: auto">Gostaria de saber como continuar expandindo sua consciência e saber mais sobre?</h4>
-        <p style="color: black; margin: 20px 0; width: auto">Cadastre seu e-mail para receber um material exclusivo sobre seu nível e matérias inéditas <br> do blog da UneVida sobre espiritualidade e outros assuntos.</p>
+        <p style="color: black; margin: 20px 0; width: auto">Gostaria de saber mais sobre? Cadastre seu e-mail para receber um detalhamento maior do seu nível.</p>
           <v-form
             ref="form"
             v-model="valid"
@@ -87,9 +85,9 @@ export default {
   },
   methods: {
     sendEmail () {
-      console.log('teste')
+      mailsender.sendEmail()
     },
-    submit () {
+    async submit () {
       this.loading = true
       this.text_botao = 'Enviado'
       
@@ -97,13 +95,26 @@ export default {
 
       Object.keys(this.form).forEach(f => {
         if (!this.form[f]) this.formHasErrors = true
-        if (!this.formHasErrors) {
-          this.loading = false
-          this.text_botao = 'Enviado'
-        }
         this.$refs[f].validate(true)
         
       })
+      if (!this.formHasErrors) {
+        this.loading = false
+        this.text_botao = 'Enviado'
+        await Email.send({
+          SecureToken: '376c463-5904-4ec4-adac-7d73fa65dfe1',
+          // SecureToken : "5a30f47a-376c-451d-ac3a-a283bf370880",
+          To : 'victordsgnr@gmail.com',
+          From : "unevida.drive@gmail.com",
+          Subject : "This is the subject",
+          Body : "<p>And this is the body</p>"
+        }).then(
+          success => {
+            console.log(success)
+          }
+        ).catch(err => console.log(err))
+        // const nodeMailer = require('@/nodeMailer/index.js')
+      }
     }
   },
   props: {

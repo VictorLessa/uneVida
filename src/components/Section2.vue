@@ -3,7 +3,7 @@
     <v-container class="section_2" id="section2">
       <v-layout justify-center column>
         <h2>Em que nível de consciencia você está?</h2>
-        <p style="margin-bottom: 50px">Seu nível de consciência determina seu grau de felicidade!</p>
+        <p style="margin-bottom: 50px; text-align: center">Seu nível de consciência determina seu grau de felicidade!</p>
       </v-layout>
       <v-layout wrap row style="justify-content: center">
         <v-flex>
@@ -295,6 +295,7 @@ p
 
   p
     width 100%
+    text-align: center
   .scroll-area
     position: relative;
     margin: auto;
@@ -313,6 +314,7 @@ p
     margin: 0 auto;
   p
     width 100%
+    text-align: center
   .citacao
     margin-top: 20px
 </style>

@@ -13,15 +13,15 @@
     <h3>Quiz: Qual o meu nível de consciência?</h3>
       <v-layout>
         <vue-goodshare-facebook
-          page_url="https://github.com"
+          page_url="https://despertarparaalma.com.br/"
           title_social="Facebook"
         ></vue-goodshare-facebook>
         <vue-goodshare-twitter
-          page_url="https://github.com"
+          page_url="https://despertarparaalma.com.br/"
           title_social="Twitter"
         ></vue-goodshare-twitter>
         <vue-goodshare-whatsapp
-          page_url="https://github.com"
+          page_url="https://despertarparaalma.com.br/"
           title_social="Whatsapp"
         ></vue-goodshare-whatsapp>
       </v-layout>

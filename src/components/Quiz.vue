@@ -252,34 +252,34 @@ export default {
         result += this.selected[i]
       }
       if (result <= 10) {
-        this.result = 'Sobrevivente'
+        this.result = 'Sobrevivência'
         // alert("Sobrevivente");
       } else if (result >= 11 && result <= 14) {
         this.result = 'Segurança'
         // alert("Segurança");
       } else if (result >= 15 && result <= 18) {
-        this.result = 'Sensação'
+        this.result = 'Sensação, Prazer'
         // alert("Sensação");
       } else if (result >= 19 && result <= 22) {
-        this.result = 'Dominio'
+        this.result = 'Domínio ou Poder Egóico'
         // alert("Dominio");
       } else if (result >= 23 && result <= 26) {
-        this.result = 'Noite escura'
+        this.result = 'A Noite escura da Alma'
         // alert("Noite escura");
       } else if (result >= 27 && result <= 30) {
-        this.result = 'Busca'
+        this.result = 'A Busca'
         // alert("busca");
       } else if (result >= 31 && result <= 33) {
-        this.result = 'Primeiro'
+        this.result = 'O Primeiro Despertar'
         // alert("primeiro");
       } else if (result >= 34 && result <= 36) {
-        this.result = 'Segundo'
+        this.result = 'O Segundo Despertar. O Amanhecer, A Realidade'
         // alert("segundo");
       } else if (result >= 37 && result <= 39) {
         this.result = 'Comprometimento'
         // alert("comprometimento");
       } else if (result >= 40) {
-        this.result = 'iluminação'
+        this.result = 'Iluminação'
         // alert("iluminação");
       }
       // this.$emit('res', true)
@@ -366,7 +366,7 @@ check(color)
   .question
     color: black;
     text-align: left;
-    height: 120px
+    height: auto
     font-size 1rem
     font-family: 'Montserrat', sans-serif
   .select_options
