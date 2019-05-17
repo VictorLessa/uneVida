@@ -153,7 +153,8 @@ input[type=button] {
 
 .botton {
   &:hover {
-    color: blue;
+    color: white;
+
   }
 }
 

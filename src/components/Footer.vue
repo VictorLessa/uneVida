@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="footer">
-    <p style="font-weight: 400">Email: portal@unevida.com.br<br>
-Telefone: (21) 3789-5621 | (21) 3659-8974<br>
+    <p style="font-weight: 400">Email: contato@universidadeparavida.com.br<br>
+Telefone: (21) 98192-1700<br>
 Copyright © {{ data }} Portal UneVida Inc. Todos os direitos reservados.</p>
   </v-container>
 </template>

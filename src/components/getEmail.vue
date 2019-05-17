@@ -100,14 +100,26 @@ export default {
         
       })
       if (!this.formHasErrors) {
-        this.loading = false
         this.text_botao = 'Enviado'
-        await classSendEmail.sendEmail().then(s => console.log(s)).catch(err => console.log(err))
+        await classSendEmail.sendEmail(this.email, this.title, this.href, this.text)
+          .then(
+            s => {
+              this.loading = false
+              this.text_botao = 'Enviado'
+          })
+          .catch(
+            err => {
+              this.loading = false
+              this.text_botao = 'Error'
+          })
       }
     }
   },
   props: {
-    result: ''
+    result: '',
+    title: '',
+    href:'',
+    text:''
   }
 }
 </script>

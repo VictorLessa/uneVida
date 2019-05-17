@@ -11,7 +11,7 @@
             id="ytplayer"
             class="playYoutube"
             type="text/html"
-            :src="`https://www.youtube.com/embed/${videoID}?version=3&autoplay=1&origin=http://localhost:8080`"
+            :src="`https://www.youtube.com/embed/${videoID}?version=3&autoplay=${play}&origin=http://localhost:8080`"
             frameborder="0"
             allowfullscreen
           />
@@ -74,7 +74,7 @@
               <p class="VideoNome">Os pazeres da emoção<br> e da mente</p>
             </Slide>
             <Slide>
-              <div class="list_thumb" @click="activeThumb5">
+              <div class="list_thumb" @click="activeThumb6">
                 <div class="thumb">
                   <div class="icon_hover" v-bind:class="{ active: isActive5 }">
                     <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
@@ -85,7 +85,7 @@
               <p class="VideoNome">Eliminar o sofrimento</p>
             </Slide>
             <Slide>
-              <div class="list_thumb" @click="activeThumb5">
+              <div class="list_thumb" @click="activeThumb7">
                 <div class="thumb">
                   <div class="icon_hover" v-bind:class="{ active: isActive5 }">
                     <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
@@ -96,7 +96,7 @@
               <p class="VideoNome">Cruzar a escuridão</p>
             </Slide>
             <Slide>
-              <div class="list_thumb" @click="activeThumb5">
+              <div class="list_thumb" @click="activeThumb8">
                 <div class="thumb">
                   <div class="icon_hover" v-bind:class="{ active: isActive5 }">
                     <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
@@ -107,7 +107,7 @@
               <p class="VideoNome">Busca coêrencia interna</p>
             </Slide>
             <Slide>
-              <div class="list_thumb" @click="activeThumb5">
+              <div class="list_thumb" @click="activeThumb9">
                 <div class="thumb">
                   <div class="icon_hover" v-bind:class="{ active: isActive5 }">
                     <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
@@ -118,7 +118,7 @@
               <p class="VideoNome">Integridade e <br>autenticidade</p>
             </Slide>
             <Slide>
-              <div class="list_thumb" @click="activeThumb5">
+              <div class="list_thumb" @click="activeThumb10">
                 <div class="thumb">
                   <div class="icon_hover" v-bind:class="{ active: isActive5 }">
                     <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
@@ -129,7 +129,7 @@
               <p class="VideoNome">Busca autorrealização</p>
             </Slide>
             <Slide>
-              <div class="list_thumb" @click="activeThumb5">
+              <div class="list_thumb" @click="activeThumb11">
                 <div class="thumb">
                   <div class="icon_hover" v-bind:class="{ active: isActive5 }">
                     <v-icon @click="activeThumb5" x-large color="white">play_arrow</v-icon>
@@ -172,6 +172,7 @@ export default {
   name: "Section2",
   data() {
     return {
+      play: 0,
       hooperSettings: {
         itemsToShow: 2,
         centerMode: true
@@ -182,7 +183,7 @@ export default {
       isActive3: false,
       isActive4: false,
       isActive5: false,
-      videoID: "2dVyPvdMtwg"
+      videoID: "cUvisVVpbeU"
     };
   },
   components: {
@@ -194,6 +195,9 @@ export default {
     // Slider
   },
   watch: {},
+  mounted () {
+    this.isActive1 = true
+  },
   methods: {
     card_bottom(index) {
       for (let i = 0; i < this.active.length; i++) {
@@ -207,7 +211,14 @@ export default {
       this.isActive3 = false;
       this.isActive4 = false;
       this.isActive5 = false;
-      this.videoID = '2dVyPvdMtwg'
+      this.isActive6 = false;
+      this.isActive7 = false;
+      this.isActive8 = false;
+      this.isActive9 = false;
+      this.isActive10 = false;
+      this.isActive11 = false;
+      this.videoID = 'cUvisVVpbeU'
+      this.play = 1
     },
     activeThumb2() {
       this.isActive1 = false;
@@ -215,7 +226,13 @@ export default {
       this.isActive3 = false;
       this.isActive4 = false;
       this.isActive5 = false;
-      this.videoID = '2dVyPvdMtwg'
+      this.isActive6 = false;
+      this.isActive7 = false;
+      this.isActive8 = false;
+      this.isActive9 = false;
+      this.isActive10 = false;
+      this.isActive11 = false;
+      this.videoID = 'SC04kJeZtSo'
     },
     activeThumb3() {
       this.isActive1 = false;
@@ -223,7 +240,13 @@ export default {
       this.isActive3 = true;
       this.isActive4 = false;
       this.isActive5 = false;
-      this.videoID = 'mu3DMgjN2tE'
+      this.isActive6 = false;
+      this.isActive7 = false;
+      this.isActive8 = false;
+      this.isActive9 = false;
+      this.isActive10 = false;
+      this.isActive11 = false;
+      this.videoID = 'z28zjR5p0Eo'
     },
     activeThumb4() {
       this.isActive1 = false;
@@ -231,7 +254,13 @@ export default {
       this.isActive3 = false;
       this.isActive4 = true;
       this.isActive5 = false;
-      this.videoID = '2dVyPvdMtwg'
+      this.isActive6 = false;
+      this.isActive7 = false;
+      this.isActive8 = false;
+      this.isActive9 = false;
+      this.isActive10 = false;
+      this.isActive11 = false;
+      this.videoID = 'HMjnQfOYj20'
     },
     activeThumb5() {
       this.isActive1 = false;
@@ -239,7 +268,97 @@ export default {
       this.isActive3 = false;
       this.isActive4 = false;
       this.isActive5 = true;
-      this.videoID = '2dVyPvdMtwg'
+      this.isActive6 = false;
+      this.isActive7 = false;
+      this.isActive8 = false;
+      this.isActive9 = false;
+      this.isActive10 = false;
+      this.isActive11 = false;
+      this.videoID = 'yTFycH9P41Y'
+    },
+    activeThumb6() {
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
+      this.isActive6 = true;
+      this.isActive7 = false;
+      this.isActive8 = false;
+      this.isActive9 = false;
+      this.isActive10 = false;
+      this.isActive11 = false;
+      this.videoID = 'PEff8IoLONY'
+    },
+    activeThumb7() {
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
+      this.isActive6 = false;
+      this.isActive7 = true;
+      this.isActive8 = false;
+      this.isActive9 = false;
+      this.isActive10 = false;
+      this.isActive11 = false;
+      this.videoID = 'yTFycH9P41Y'
+    },
+    activeThumb8() {
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
+      this.isActive6 = false;
+      this.isActive7 = false;
+      this.isActive8 = true;
+      this.isActive9 = false;
+      this.isActive10 = false;
+      this.isActive11 = false;
+      this.videoID = 'yTFycH9P41Y'
+    },
+    activeThumb9() {
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
+      this.isActive6 = false;
+      this.isActive7 = false;
+      this.isActive8 = false;
+      this.isActive9 = true;
+      this.isActive10 = false;
+      this.isActive11 = false;      
+      this.videoID = 'yTFycH9P41Y'
+    },
+    activeThumb10() {
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
+      this.isActive6 = false;
+      this.isActive7 = false;
+      this.isActive8 = false;
+      this.isActive9 = false;
+      this.isActive10 = true;
+      this.isActive11 = false;
+      this.videoID = 'yTFycH9P41Y'
+    },
+    activeThumb11() {
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
+      this.isActive6 = false;
+      this.isActive7 = false;
+      this.isActive8 = false;
+      this.isActive9 = false;
+      this.isActive10 = false;
+      this.isActive11 = true;
+      this.videoID = 'yTFycH9P41Y'
     }
   }
 };
@@ -316,6 +435,7 @@ p
   height: 80px;
   margin-bottom: 5px;
   display flex
+  cursor: pointer;
   justify-content center
   &:hover
     z-index 105

@@ -7,7 +7,7 @@
       >
 
           <v-spacer></v-spacer>
-            <!-- Contato -->
+            <a href="https://universidadeparavida.com.br/contato/" style="text-decoration: none; font-family: Montserrat, sans-serif; color: white">Contato</a>
 
       </v-toolbar>
     <!-- <v-container fluid class="nav">
