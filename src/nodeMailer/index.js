@@ -18,6 +18,7 @@ const sendEmail = async (email, title, href, text) => {
       "email_from": "nao-responda@universidadeparavida.com.br",
       "subject": "Confira o resultado do seu quiz UneVida",
       "body": template(title, href, text)
+
     }
   }
   return await axios.request(config)
