@@ -302,7 +302,7 @@ export default {
       this.isActive9 = false;
       this.isActive10 = false;
       this.isActive11 = false;
-      this.videoID = 'yTFycH9P41Y'
+      this.videoID = 'nz36WwOJTYI'
     },
     activeThumb8() {
       this.isActive1 = false;
@@ -316,7 +316,7 @@ export default {
       this.isActive9 = false;
       this.isActive10 = false;
       this.isActive11 = false;
-      this.videoID = 'yTFycH9P41Y'
+      this.videoID = 'bYhRvpHMmv8'
     },
     activeThumb9() {
       this.isActive1 = false;
@@ -330,7 +330,7 @@ export default {
       this.isActive9 = true;
       this.isActive10 = false;
       this.isActive11 = false;      
-      this.videoID = 'yTFycH9P41Y'
+      this.videoID = 'ct2Ad7T-RXg'
     },
     activeThumb10() {
       this.isActive1 = false;
@@ -344,7 +344,7 @@ export default {
       this.isActive9 = false;
       this.isActive10 = true;
       this.isActive11 = false;
-      this.videoID = 'yTFycH9P41Y'
+      this.videoID = 'uPphZRgGmTA'
     },
     activeThumb11() {
       this.isActive1 = false;
@@ -358,7 +358,7 @@ export default {
       this.isActive9 = false;
       this.isActive10 = false;
       this.isActive11 = true;
-      this.videoID = 'yTFycH9P41Y'
+      this.videoID = 'f9yvGW4C0_s'
     }
   }
 };
