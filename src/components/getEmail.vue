@@ -1,7 +1,9 @@
 <template>
   <!-- <v-container grid-list-md text-xs-center>
     <v-layout row wrap> -->
+    <transition name="fade">
       <v-card
+        v-if="!success"
         dark
         color="#F9FAF6"
         class="cardGetEmail"
@@ -47,6 +49,21 @@
         </v-container>
           </v-form>
       </v-card>
+      <v-card 
+        v-else
+        dark
+        color="#F9FAF6"
+        class="cardGetEmail">
+        <v-card-title
+          style="justify-content: center"
+        >
+          <div>
+            <h3 align="center" style="color: black">Cadastro realizado com sucesso</h3>
+            <p style="color: black"> Em instantes você receberá no seu <br> e-mail mais detalhes do seu nível de consciência</p>
+          </div>
+        </v-card-title>
+      </v-card>
+    </transition>
     <!-- </v-layout>
   </v-container> -->
 </template>
@@ -59,6 +76,7 @@ export default {
     return {
       valid: true,
       loading: false,
+      success: false,
       email: null,
       text_botao: 'Enviar',
       errorMessages: '',
@@ -105,6 +123,7 @@ export default {
           .then(
             s => {
               this.loading = false
+              this.success = true
               this.text_botao = 'Enviado'
           })
           .catch(
@@ -147,10 +166,13 @@ i = !important
 //   height 56px
 //   width: 200px
 //   margin 0 0 0 10px
+.fade-enter-active, .fade-leave-active
+  transition: opacity .5s
+.fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */
+  opacity: 0
 .cardGetEmail
   width: 100%;
   padding: 20px;
-
 @media (max-width 500px)
   .form
     width 100%
@@ -159,5 +181,4 @@ i = !important
     padding: 10px;
   .btn-send
     width 95%
-
 </style>

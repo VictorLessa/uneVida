@@ -3,6 +3,7 @@
     <v-container class="section_2" id="section2">
       <v-layout justify-center column>
         <h2>Em que nível de consciencia você está?</h2>
+        <p style="margin-bottom: 10px; text-align: center">(inspirado no trabalho da Sra. Marian Ma Dayamayi - Marta Magalhães - Fonte: site Somos Todos Um)</p>
         <p style="margin-bottom: 50px; text-align: center">Seu nível de consciência determina seu grau de felicidade!</p>
       </v-layout>
       <v-layout wrap row style="justify-content: center">
@@ -38,7 +39,7 @@
                   <img src="/static/01 sobrevivencia.jpg" alt>
                 </div>
               </div>
-              <p class="VideoNome">O meu momento é<br> de sobrevivencia?</p>
+              <p class="VideoNome">Nível de consciência 1: <br> Sobrevivência?</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb3">
@@ -49,7 +50,7 @@
                   <img src="/static/02.jpg" alt>
                 </div>
               </div>
-              <p class="VideoNome">Já passei por meu<br> momento de segurança?</p>
+              <p class="VideoNome">Nível de consciência 2:<br> Segurança?</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb4">
@@ -60,7 +61,7 @@
                   <img src="/static/03.jpg" alt>
                 </div>
               </div>
-              <p class="VideoNome">A busca incanssante<br> pela sensação de prazer</p>
+              <p class="VideoNome">Nível de consciência 3:<br> Sensação, prazer</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb5">
@@ -71,7 +72,7 @@
                   <img src="/static/04.jpg" alt>
                 </div>
               </div>
-              <p class="VideoNome">Os pazeres da emoção<br> e da mente</p>
+              <p class="VideoNome">Nível de consciência 4:<br>Domínio ou Poder Egóico</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb6">
@@ -82,7 +83,7 @@
                   <img src="/static/05.jpg" alt>
                 </div>
               </div>
-              <p class="VideoNome">Eliminar o sofrimento</p>
+              <p class="VideoNome">Nível de consciência 5: <br>A noite Escura da Alma</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb7">
@@ -93,7 +94,7 @@
                   <img src="/static/06.jpg" alt>
                 </div>
               </div>
-              <p class="VideoNome">Cruzar a escuridão</p>
+              <p class="VideoNome">Nível de consciência 6: <br> A busca</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb8">
@@ -104,7 +105,7 @@
                   <img src="/static/07.jpg" alt>
                 </div>
               </div>
-              <p class="VideoNome">Busca coêrencia interna</p>
+              <p class="VideoNome">Nível de consciência 7: <br> O Primeiro Despertar</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb9">
@@ -115,7 +116,7 @@
                   <img src="/static/08.jpg" alt>
                 </div>
               </div>
-              <p class="VideoNome">Integridade e <br>autenticidade</p>
+              <p class="VideoNome">Nível de consciência 8: <br>O Segundo Despertar...</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb10">
@@ -126,7 +127,7 @@
                   <img src="/static/09.jpg" alt>
                 </div>
               </div>
-              <p class="VideoNome">Busca autorrealização</p>
+              <p class="VideoNome">Nível de consciência 9: <br> Comprometimento</p>
             </Slide>
             <Slide>
               <div class="list_thumb" @click="activeThumb11">
@@ -137,7 +138,7 @@
                   <img src="/static/10.jpg" alt>
                 </div>
               </div>
-              <p class="VideoNome">Expressa Deus</p>
+              <p class="VideoNome">Nível de consciência 10: <br>Iluminação</p>
             </Slide>
             <hooper-navigation slot="hooper-addons"></hooper-navigation>
           </Hooper>
@@ -472,7 +473,7 @@ p
     margin 50px 0 40px 0 i
   .playYoutube
     width: 100%;
-    height: 185px;
+    height: 205px;
 
   .hooper
     height: 120px;
