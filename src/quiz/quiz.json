@@ -12,15 +12,75 @@
     "10. Você sente que transcendeu os limites grosseiros da matéria e se reintegrou à Unidade?"
   ],
   "values": [
-    {"value1": 4, "value2": 3, "value3": 0, "value4": 2, "value5": 1},
-    {"value1": 4, "value2": 3, "value3": 0, "value4": 2, "value5": 1},
-    {"value1": 4, "value2": 3, "value3": 0, "value4": 2, "value5": 1},
-    {"value1": 4, "value2": 3, "value3": 0, "value4": 2, "value5": 1},
-    {"value1": 4, "value2": 3, "value3": 0, "value4": 2, "value5": 1},
-    {"value1": 4, "value2": 3, "value3": 0, "value4": 2, "value5": 1},
-    {"value1": 4, "value2": 3, "value3": 0, "value4": 2, "value5": 1},
-    {"value1": 4, "value2": 3, "value3": 0, "value4": 2, "value5": 1},
-    {"value1": 4, "value2": 3, "value3": 0, "value4": 2, "value5": 1},
-    {"value1": 4, "value2": 3, "value3": 0, "value4": 2, "value5": 1}
+    {
+      "value1": 4,
+      "value2": 3,
+      "value3": 2,
+      "value4": 1,
+      "value5": 0
+    },
+    {
+      "value1": 4,
+      "value2": 3,
+      "value3": 2,
+      "value4": 1,
+      "value5": 0
+    },
+    {
+      "value1": 4,
+      "value2": 3,
+      "value3": 2,
+      "value4": 1,
+      "value5": 0
+    },
+    {
+      "value1": 4,
+      "value2": 3,
+      "value3": 2,
+      "value4": 1,
+      "value5": 0
+    },
+    {
+      "value1": 0,
+      "value2": 1,
+      "value3": 2,
+      "value4": 3,
+      "value5": 4
+    },
+    {
+      "value1": 0,
+      "value2": 1,
+      "value3": 2,
+      "value4": 3,
+      "value5": 4
+    },
+    {
+      "value1": 0,
+      "value2": 1,
+      "value3": 2,
+      "value4": 3,
+      "value5": 4
+    },
+    {
+      "value1": 0,
+      "value2": 1,
+      "value3": 2,
+      "value4": 3,
+      "value5": 4
+    },
+    {
+      "value1": 0,
+      "value2": 1,
+      "value3": 2,
+      "value4": 3,
+      "value5": 4
+    },
+    {
+      "value1": 0,
+      "value2": 1,
+      "value3": 2,
+      "value4": 3,
+      "value5": 4
+    }
   ]
 }

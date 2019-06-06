@@ -2,7 +2,8 @@ import Axios from 'axios'
 
 const axios = Axios.create({
   headers: {
-    'Access-Control-Allow-Origin': 'https://despertarparaalma.com.br', 'Content-Type': 'application/json', 'access-control-allow-headers': 'Authorization' }
+    'Access-Control-Allow-Origin': 'https://despertarparaalma.com.br', 'Content-Type': 'application/json', 'access-control-allow-headers': 'Authorization'
+  }
 })
 
 function template(title, href, text) {
@@ -17,7 +18,9 @@ const sendEmail = async (email, title, href, text) => {
       "name_from": "Confira seu resultado",
       "email_from": "nao-responda@universidadeparavida.com.br",
       "subject": "Confira o resultado do seu quiz UneVida",
-      "body": template(title, href, text)
+      "body": template(title, href, text),
+      "is_html": true,
+      "title": title
 
     }
   }
