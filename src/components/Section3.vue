@@ -21,6 +21,7 @@
           title_social="Twitter"
         ></vue-goodshare-twitter>
         <vue-goodshare-whatsapp
+          bundle="mobile"
           page_url="https://despertarparaalma.com.br/"
           title_social="Whatsapp"
         ></vue-goodshare-whatsapp>
@@ -34,7 +35,7 @@
 <script>
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
-import VueGoodshareWhatsapp from "vue-goodshare/src/providers/Whatsapp.vue";
+import VueGoodshareWhatsapp from "vue-goodshare/src/providers/WhatsApp";
 import Quiz from './Quiz'
 import getEmail from "./getEmail";
 export default {
