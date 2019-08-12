@@ -70,6 +70,7 @@
 
 <script>
 import classSendEmail from '@/nodeMailer/index.js'
+import { mailChimpList } from '@/mailChimp/index.js'
 export default {
   name: "Result",
   data () {
@@ -108,7 +109,7 @@ export default {
     },
     async submit () {
       this.loading = true
-      this.text_botao = 'Enviado'
+      this.text_botao = 'Enviando'
       
       this.formHasErrors = false
 
@@ -119,6 +120,11 @@ export default {
       })
       if (!this.formHasErrors) {
         this.text_botao = 'Enviado'
+        try {
+          await mailChimpList(this.email)
+        }catch(error){
+          console.log(error)
+        }
         await classSendEmail.sendEmail(this.email, this.title, this.href, this.text)
           .then(
             s => {
